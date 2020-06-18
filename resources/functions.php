@@ -1,8 +1,12 @@
 <?php
+    
+    function redirect($location){
+        header("Location: $location");
+    }
 
-if($connection){
-    echo "connection established";
-}
+    function query($sql){
+        global $connection;
+        return mysqli_query($connection,$sql);
+    }
 
-echo "from function";
 ?>
