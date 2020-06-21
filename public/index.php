@@ -2,13 +2,15 @@
 <?php include(TEMPLATE_FRONT . DS . "header.php") ?>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="row">
 
-        <?php include(TEMPLATE_FRONT . DS . "side_nav.php") ?>
+        <!-- <?php include(TEMPLATE_FRONT . DS . "side_nav.php") ?> -->
 
-            <div class="col-md-9">
+            <div class="col-lg-12" style="
+    padding-left: 0px;
+    padding-right: 0px">
             
                 <div class="carousel-holder">
                 <div class='row'>
