@@ -4,3 +4,7 @@
 .thumbnail a img{
     height: 150px;
 }
+
+.nav li a .active{
+    color:white;
+}
