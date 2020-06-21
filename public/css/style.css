@@ -4,6 +4,9 @@
 .thumbnail a img{
     height: 150px;
 }
+.thumbnail :hover{
+    transform: scale(2);
+}
 
 .nav li a .active{
     color:white;

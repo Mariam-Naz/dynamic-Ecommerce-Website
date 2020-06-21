@@ -30,8 +30,8 @@
             $desc = $row['product_description'];
             $sub_desc = substr($desc,0,100);
             $product = <<< DELIMETER
-<div class="col-sm-4 col-lg-4 col-md-4">
-<div class="thumbnail">
+<div class="col-sm-12 col-lg-4 col-md-4">
+<div class="thumbnail" style="box-shadow: 10px 20px 20px 0 rgba(0,0,0,0.1);" onMouseOver="this.style.transform= 'scale(1.1)'" onMouseOut="this.style.transform= 'scale(1)'">
 <a href='item.php?id={$row['product_id']}'><img src=$row[product_image] alt=""></a>
 <div class="caption">
     <h4 class="pull-right">Rs. $row[product_price]</h4>

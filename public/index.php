@@ -19,12 +19,16 @@
                   <?php include(TEMPLATE_FRONT . DS . "slider.php") ?>
                     </div>
                 </div>
-                    
+                </div>
+                </div>
+                <div class="col-lg-12"  style="
+    padding-left: 13%;
+    padding-right: 13%">
                     <div class="container-fluid">
                     <?php include(TEMPLATE_FRONT . DS . "praise.php") ?>
                     </div>
-                </div>
                
+            
 
                 <div class="row">
                
@@ -45,15 +49,7 @@
                             </div> -->
                         </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
-                        </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                       
-                    </div>
-
                 </div>
-
             </div>
 
         </div>

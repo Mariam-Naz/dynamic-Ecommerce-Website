@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body style="background-color:whitesmoke;">
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
