@@ -28,7 +28,6 @@
 </head>
 
 <body style="background-color:whitesmoke;">
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
        <?php include(TEMPLATE_FRONT . DS . 'top_nav.php')?>

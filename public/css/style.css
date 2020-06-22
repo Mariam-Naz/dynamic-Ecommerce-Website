@@ -1,13 +1,28 @@
 .caption{
-    height: 180px;
+    height: 165px;
 }
 .thumbnail a img{
-    height: 150px;
+    height: 145px;
 }
-.thumbnail :hover{
-    transform: scale(2);
+.img-size img{
+    height: 145px;
 }
-
-.nav li a .active{
+.cust-thumb .thumbnail:hover{
+    transition:0.5s;
+    box-shadow: 15px 26px 22px 0 rgba(0,0,0,0.1);
     color:white;
+   
+}
+.inner-nav {
+    display: none;
+}
+.inner-nav li a{
+    color: grey;
+}
+.inner-li:hover .inner-nav{
+    display: block;
+    list-style: none;
+}
+.inner-nav li:hover a{
+    color: white;
 }

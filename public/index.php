@@ -32,9 +32,9 @@
 
                 <div class="row">
                
-
+                
                 <?php get_products(); ?>
-                    
+            
 
                            <!-- --- rating---- -->
                             <!-- <div class="ratings">

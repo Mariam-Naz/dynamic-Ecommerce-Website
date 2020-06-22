@@ -30,18 +30,24 @@
             $desc = $row['product_description'];
             $sub_desc = substr($desc,0,100);
             $product = <<< DELIMETER
+
 <div class="col-sm-12 col-lg-4 col-md-4">
-<div class="thumbnail" style="box-shadow: 10px 20px 20px 0 rgba(0,0,0,0.1);" onMouseOver="this.style.transform= 'scale(1.1)'" onMouseOut="this.style.transform= 'scale(1)'">
+<div class="cust-thumb">
+<div class="thumbnail">
+
 <a href='item.php?id={$row['product_id']}'><img src=$row[product_image] alt=""></a>
 <div class="caption">
     <h4 class="pull-right">Rs. $row[product_price]</h4>
+    
     <h4><a href="item.php?id={$row['product_id']}">$row[product_title]</a>
     </h4>
     <p>$sub_desc ...<a href='item.php'> Read more</a></p>
-    <a class="btn btn-primary" target="_blank" href="item.php?id={$row['product_id']}">ADD TO CART</a>
+   <a class="btn btn-primary" target="_blank" href="item.php?id={$row['product_id']}">ADD TO CART</a>
 </div>
 </div>
 </div>
+</div>
+
 DELIMETER;
 echo $product;
         }
@@ -54,7 +60,7 @@ echo $product;
 
         while($row = mysqli_fetch_array($query)){
             $categoryLinks = <<< DELIMETER
-<a href="category.php?id={$row['cat_id']}" class='list-group-item'>$row[cat_title]</a>
+<li><a href="category.php?id={$row['cat_id']}">$row[cat_title]</a></li>
 DELIMETER;
 echo $categoryLinks;
         }
@@ -70,7 +76,7 @@ echo $categoryLinks;
             $product = <<< DELIMETER
             <div class="col-md-3 col-sm-6 hero-feature">
             <div class="thumbnail">
-                <img src= $row[product_image] alt="">
+                <img style="height: 145px;"src= $row[product_image] alt="">
                 <div class="caption">
                     <h3>$row[product_title]</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -92,12 +98,10 @@ echo $product;
         confirm($query);
 
         while($row = mysqli_fetch_array($query)){
-            $desc = $row['product_description'];
-            $sub_desc = substr($desc,0,100);
             $product = <<< DELIMETER
             <div class="col-md-3 col-sm-6 hero-feature">
             <div class="thumbnail">
-                <img src= $row[product_image] alt="">
+                <img class='img-size' src= $row[product_image] alt="">
                 <div class="caption">
                     <h3>$row[product_title]</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

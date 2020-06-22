@@ -9,7 +9,7 @@
         padding-top: 12px;
         padding-bottom: 20px;
         margin-bottom: 6%;
-        color:grey;
+        color:black;
     }
 </style>
 <div class='wrap'>
@@ -19,7 +19,7 @@
             <h3>BEST OFFER</h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr sadipscing elitr</p>
     </div>
-    <div class='card col-lg-4 col-md-6' style="background-color:smokewhite; color: black;">
+    <div class='card col-lg-4 col-md-6' style="background-color:#3498db; color: white;">
             <h3>BEST PRICES</h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr sadipscing elitr</p>
     </div>
