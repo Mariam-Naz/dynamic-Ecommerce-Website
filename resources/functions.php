@@ -117,5 +117,14 @@ echo $product;
         }
 
     }
+
+function login_user(){
+    if(isset($_POST['submit'])){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $query = query("SELECT * FROM users WHERE username = '{$username}' AND password = '{$password}'");
+        confirm($query);
+    }
+}
 // ********************************** BACK END *****************************************************************************
 ?>
