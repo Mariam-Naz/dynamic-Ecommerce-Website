@@ -10,7 +10,7 @@
 
      <!--Navigation -->
 
-<?php include(TEMPLATE_FRONT .  "/top_nav.php");?>
+
 
          <!-- Contact Section -->
 
