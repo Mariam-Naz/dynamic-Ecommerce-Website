@@ -7,24 +7,19 @@
 <!-- Header-->
 <?php include(TEMPLATE_FRONT .  "/header.php");?>
 
-
-     <!--Navigation -->
-
-
-
          <!-- Contact Section -->
 
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted"></h3>
+                    <!-- <h3 class="section-subheading"><?php display_message(); ?></h3> -->
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <form name="sentMessage" id="contactForm" method="POST" >
-                    <h4 class="text-center bg-warning" style="color:blue"><?php send_message(); ?></h4>
+                        <?php send_message(); ?>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -36,7 +31,7 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="subject" class="form-control" placeholder="Your Sunject" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <input type="text" name="subject" class="form-control" placeholder="Your Subject" id="phone" required data-validation-required-message="Please enter your phone number.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
