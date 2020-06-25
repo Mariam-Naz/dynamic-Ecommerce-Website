@@ -57,7 +57,7 @@
     <h4><a href="item.php?id={$row['product_id']}">$row[product_title]</a>
     </h4>
     <p>$sub_desc ...<a href='item.php'> Read more</a></p>
-   <a class="btn btn-primary" target="_blank" href="item.php?id={$row['product_id']}">ADD TO CART</a>
+   <a class="btn btn-primary" target="_blank" href="cart.php?add={$row['product_id']}">ADD TO CART</a>
 </div>
 </div>
 </div>
