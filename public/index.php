@@ -7,7 +7,7 @@
         <div class="row">
 
         <!-- <?php include(TEMPLATE_FRONT . DS . "side_nav.php") ?> -->
-
+        
             <div class="col-lg-12" style="
     padding-left: 0px;
     padding-right: 0px">
@@ -17,7 +17,9 @@
                     <div class="col-lg-12">
                         
                   <?php include(TEMPLATE_FRONT . DS . "slider.php") ?>
+                
                     </div>
+                </div>
                 </div>
                 </div>
                 </div>
@@ -52,8 +54,6 @@
                 </div>
             </div>
 
-        </div>
-
-    </div>
+        
     <!-- /.container -->
     <?php include(TEMPLATE_FRONT . DS . "footer.php") ?>

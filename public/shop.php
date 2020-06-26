@@ -2,7 +2,7 @@
 <?php include(TEMPLATE_FRONT . DS . "header.php") ?>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container-fluid">
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
@@ -17,7 +17,7 @@
         <!-- Page Features -->
         <div class="row text-center">
         <?php goto_shop() ?>
-          
+        </div>
         </div>
         <!-- /.row -->
 

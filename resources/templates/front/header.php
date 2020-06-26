@@ -17,6 +17,7 @@
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

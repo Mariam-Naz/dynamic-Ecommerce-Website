@@ -116,7 +116,7 @@ echo $product;
             $product = <<< DELIMETER
             <div class="col-md-3 col-sm-6 hero-feature">
             <div class="thumbnail">
-                <img class='img-size' src= $row[product_image] alt="">
+                <img  style="height: 145px"; class='img-size' src= $row[product_image] alt="">
                 <div class="caption">
                     <h3>$row[product_title]</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
