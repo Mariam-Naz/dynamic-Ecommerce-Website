@@ -13,8 +13,8 @@
 <!-- /.row --> 
 
 <div class="row">
-
-      <h1>Checkout</h1>
+    <h4 class="text-center bg-danger"><?php display_message(); ?></h4>
+    <h1>Checkout</h1>
 
 <form action="">
     <table class="table table-striped">
