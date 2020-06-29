@@ -39,12 +39,13 @@ function cart(){
                 confirm($query);
     
         while($row = mysqli_fetch_array($query)){
+            $sub = $row['product_price'] * $value;
             $product = <<<DELIMETER
             <tr>
                     <td>{$row['product_title']}</td>
-                    <td>$23</td>
-                    <td>3</td>
-                    <td>2</td>
+                    <td>Rs.{$row['product_price']}/-</td>
+                    <td>{$value}</td>
+                    <td>{$sub}</td>
                     <td><a class='btn btn-warning' href="cart.php?remove={$row['product_id']}"><span class = 'glyphicon glyphicon-minus'></span></a>
                     <a class='btn btn-success' href="cart.php?add={$row['product_id']}"><span class = 'glyphicon glyphicon-plus'></span></a>
                     <a class='btn btn-danger' href="cart.php?delete={$row['product_id']}"><span class = 'glyphicon glyphicon-remove'></span></a></td>
