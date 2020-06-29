@@ -46,7 +46,7 @@
 <tr class="cart-subtotal">
 <th>Items:</th>
 <td><span class="amount"><?php 
-echo isset($_SESSION['quantity_total']) ? $_SESSION['quantity_total'] : $_SESSION['quantity_total'] = "";
+echo isset($_SESSION['quantity_total']) ? $_SESSION['quantity_total'] : $_SESSION['quantity_total'] = "0";
 ?>
 </span></td>
 </tr>
@@ -58,7 +58,7 @@ echo isset($_SESSION['quantity_total']) ? $_SESSION['quantity_total'] : $_SESSIO
 <tr class="order-total">
 <th>Order Total</th>
 <td><strong><span class="amount">Rs.<?php 
-echo isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_total'] = "";
+echo isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_total'] = "0";
 ?>/-
 </span></strong> </td>
 </tr>
