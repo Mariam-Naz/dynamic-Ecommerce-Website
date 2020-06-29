@@ -30,6 +30,9 @@ if(isset($_GET['delete'])){
 
 function cart(){
 
+    $total = 0;
+    $total_items = 0;
+
     foreach ($_SESSION as $name => $value) {
         if($value > 0){
             if(substr($name,0, 8) == "product_"){
@@ -54,6 +57,8 @@ function cart(){
         DELIMETER;
         echo $product;
         }
+        $_SESSION['item_total'] = $total += $sub;
+        $_SESSION['quantity_total'] = $total_items += $value;
     
             }   
         }
