@@ -19,7 +19,6 @@
                             <div class="dropdown">
                                 <ul>
                                     <?php get_categories();?>
-                                    <div class="arrow"></div>
                                 </ul>
                             </div>
                         </li>
