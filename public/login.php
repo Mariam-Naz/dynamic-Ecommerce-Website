@@ -4,8 +4,11 @@
     <!-- Page Content -->
     <div class="container">
 
-      <header>
-            <h1 class="text-center" style="background-color: rgb(224, 225, 226);">Login</h1>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Login</h2>
+                </div>
+    </div>
             <h4 class="text-center bg-warning" style="color:red"><?php display_message(); ?></h4>
         <div class="col-sm-4 col-sm-offset-5">         
             <form class="" action="" method="post" enctype="multipart/form-data">
