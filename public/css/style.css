@@ -16,22 +16,8 @@ body{
     color:white;
    
 }
-.inner-nav {
-    display: none;
-}
-.inner-nav li a{
-    color: grey;
-}
-.inner-li:hover .inner-nav{
-    display: block;
-    list-style: none;
-}
-.inner-nav li:hover a{
-    color: white;
-}
-/* 
-circle-nav */
 
+/* navbar */
 .nav-confluid{
   padding: 0;
   display:flex;
