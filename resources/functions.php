@@ -75,7 +75,7 @@ echo $product;
 
         while($row = mysqli_fetch_array($query)){
             $categoryLinks = <<< DELIMETER
-<li><a href="category.php?id={$row['cat_id']}">$row[cat_title]</a></li>
+<li class="dropdown-link"><a href="category.php?id={$row['cat_id']}">$row[cat_title]</a></li>
 DELIMETER;
 echo $categoryLinks;
         }

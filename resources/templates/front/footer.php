@@ -1,7 +1,5 @@
 
         <hr>
-
-        <!-- Footer -->
         <!-- Footer -->
 <footer class="page-footer font-small pt-4" style='background-color:#1b1e23; margin-bottom: 0px; color:#a9a9a9'>
 
@@ -145,7 +143,6 @@
 
     </div>
     <!-- /.container -->
-
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 

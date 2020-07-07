@@ -1,62 +1,55 @@
-<div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.php">Home</a>
+
+            
+     <header>
+        <div class="container-fluid nav-confluid">
+            <input type="checkbox" name="" id="check">
+        <!-- brandname -->
+            <div class="logo-container">
+                <h3 class="logo">TECHNOFY<span>Name</span></h3>
+            </div>
+        <!-- options-->
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="index.php">HOME</a>
+                        </li>
+                        <li class="nav-link" style="--i: .85s">
+                            <a href="#">CATEGORIES<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <?php get_categories();?>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="checkout.php">CHECKOUT</a>
+                            
+                        </li>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="contact.php">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="log-sign" style="--i: 1.8s">
+                    <a href="#" class="btn transparent">Log in</a>
+                    <a href="#" class="btn solid">Sign up</a>
+                </div>
             </div>
 
-            <style>
-                .inner-nav {
-                     display: none;
-                 }
-                 .inner-nav li a{
-                     color: grey;
-                 }
-                 .inner-li:hover .inner-nav{
-                     display: block;
-                     list-style: none;
-                 }
-                 .inner-nav li:hover a{
-                     color: white;
-                 }
-            </style>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                <li>
-                        <a href="index.php">Home</a>
-                    </li>
-                    <li class="inner-li">
-                        <a href="#" >Categories</a>
-                        <ul class="inner-nav">
-                            <?php get_categories();?>
-                          
-                    
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="shop.php">Shop</a>
-                    </li>
-                    <li>
-                        <a href="login.php">Login</a>
-                    </li>
-                    <li>
-                        <a href="admin">Admin</a>
-                    </li>
-                     <li>
-                        <a href="checkout.php">Checkout</a>
-                    </li>
-                    <li>
-                        <a href="contact.php">Contact</a>
-                    </li>
-
-                </ul>
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
+    </header>
+    <main>
+        <section>
+            <div class="overlay"></div>
+        </section>
+    </main>
+        
         <!-- /.container -->
