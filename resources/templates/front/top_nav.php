@@ -5,7 +5,7 @@
             <input type="checkbox" name="" id="check">
         <!-- brandname -->
             <div class="logo-container">
-                <h3 class="logo">TECHNOFY<span>Name</span></h3>
+                <h3 class="logo">TECHNOFY</h3>
             </div>
         <!-- options-->
             <div class="nav-btn">

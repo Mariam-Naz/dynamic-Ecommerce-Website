@@ -143,6 +143,7 @@
 
     </div>
     <!-- /.container -->
+    <script src='js/animation.js'></script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
