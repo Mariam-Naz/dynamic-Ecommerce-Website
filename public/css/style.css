@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 body{
+    font-family: 'Roboto', sans-serif;
     background-color:rgb(224, 225, 226);
 }
 .caption{
@@ -63,7 +66,7 @@ header{
 }
 
 .logo{
-    color: rgb(207, 205, 205);
+    color: rgb(255, 255, 255);
     font-size: 3rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -77,12 +80,12 @@ header{
 
 .btn{
     display: inline-block;
-    padding: 1rem 1.3rem;
+    padding: 1rem 1.8rem;
     font-size: 1rem;
     border: 2px solid #fff;
     border-radius: 2rem;
     line-height: 1;
-    margin: 0 .2rem;
+    margin: 0 1rem;
     transition: .3s;
     text-transform: uppercase;
 }
@@ -110,14 +113,14 @@ header{
 .nav-link > a{
     margin-top: 10px;
     line-height: 5rem;
-    color: rgb(255, 253, 253);
-    padding: 0 2rem;
+    color: rgb(192, 192, 192);
+    padding: 0 3rem;
     letter-spacing: 1px;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: .3s;
+    transition: .1s;
 }
 
 .nav-link > a > i{
@@ -126,6 +129,8 @@ header{
 
 .nav-link:hover > a{
     transform: scale(1.1);
+    color: #ffffff;
+    text-decoration: solid;
 }
 
 .dropdown{
@@ -436,12 +441,11 @@ header{
 
 /* logo-animation */
 .logo{
-    
     animation: type 3s infinite steps(20);
     overflow: hidden;
     white-space: nowrap;
     font-family: consolas;
-    border-right: 8px solid rgb(167, 167, 168);
+    border-right: 8px solid rgb(252, 252, 255);
     width: 10ch;
 }
 
@@ -450,6 +454,6 @@ header{
         width: 0ch;
     }
     100%{
-       width: 10.ch;
+       width: 10ch;
     }
 }
