@@ -17,7 +17,8 @@
     <h4 class="text-center bg-danger"><?php display_message(); ?></h4>
     <h1>Checkout</h1>
 
-<form action="">
+<form class="" action="" method="post">
+    <?php orders(); ?>
     <table class="table table-striped">
         <thead>
           <tr>
@@ -32,6 +33,7 @@
            <?php cart(); ?>
         </tbody>
     </table>
+    <button type="submit" name="submit" class="btn btn-warning">BUY</button>
 </form>
 
 

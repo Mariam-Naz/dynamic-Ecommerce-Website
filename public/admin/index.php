@@ -23,7 +23,7 @@
                         include(TEMPLATE_BACK . "/admin_content.php");
                     }               
 
-                    if(isset($_GET['orders'])){
+                    if(isset($_GET['add'])){
                         include(TEMPLATE_BACK . "/orders.php");
                     }
                 ?>
