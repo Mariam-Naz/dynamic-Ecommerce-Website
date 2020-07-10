@@ -31,7 +31,7 @@ if(isset($_GET['delete'])){
     unset($_SESSION['quantity_total']);
     redirect('checkout.php');
 }
-
+$pro_id = [];
 function cart(){
 
     $total = 0;
@@ -47,6 +47,8 @@ function cart(){
     
         while($row = mysqli_fetch_array($query)){
             $sub = $row['product_price'] * $value;
+            global $pro_id;
+            array_push($pro_id,$row['product_id']);
             $product = <<<DELIMETER
             <tr>
                     <td>{$row['product_title']}</td>
@@ -56,8 +58,7 @@ function cart(){
                     <td><a class='btn btn-warning' href="cart.php?remove={$row['product_id']}"><span class = 'glyphicon glyphicon-minus'></span></a>
                     <a class='btn btn-success' href="cart.php?add={$row['product_id']}"><span class = 'glyphicon glyphicon-plus'></span></a>
                     <a class='btn btn-danger' href="cart.php?delete={$row['product_id']}"><span class = 'glyphicon glyphicon-remove'></span></a></td>
-                  
-                </tr>
+            </tr>
         DELIMETER;
         echo $product;
         }
@@ -66,6 +67,8 @@ function cart(){
     
             }   
         }
+        
     }
 }
+ 
 ?>

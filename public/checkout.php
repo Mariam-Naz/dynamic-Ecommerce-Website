@@ -1,7 +1,10 @@
 <!-- Configuration-->
 
 <?php require_once("../resources/config.php"); ?>
-<?php require_once("cart.php"); ?>
+<?php require_once("cart.php"); 
+    $quant = isset($_SESSION['quantity_total']) ? $_SESSION['quantity_total'] : $_SESSION['quantity_total'] = "0";
+    $amount = isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_total'] = "0";
+?>
 
 
 <!-- Header-->
@@ -18,7 +21,18 @@
     <h1>Checkout</h1>
 
 <form class="" action="" method="post">
-    <?php orders(); ?>
+<?php 
+if(isset($_POST['submit'])){
+    // redirect('thank_you.php');
+    global $pro_id;
+    //  $query = query("INSERT INTO orders(product_order_id,order_quantity,order_date,order_status,order_amount) VALUES('$pro_id[1]' , '$quant', '7-9-2020', 'complete','$amount')");
+    foreach($pro_id as $pid){
+        echo $pid;
+    $query = query("INSERT INTO orders(product_order_id,order_quantity,order_date,order_status,order_amount) VALUES('$pid' , '$quant', '7-9-2020', 'complete','$amount')");
+}
+}
+    ?>
+ 
     <table class="table table-striped">
         <thead>
           <tr>
@@ -30,9 +44,10 @@
           </tr>
         </thead>
         <tbody>
-           <?php cart(); ?>
+         <?php cart(); ?>
         </tbody>
     </table>
+   
     <button type="submit" name="submit" class="btn btn-warning">BUY</button>
 </form>
 
@@ -49,6 +64,9 @@
 <th>Items:</th>
 <td><span class="amount"><?php 
 echo isset($_SESSION['quantity_total']) ? $_SESSION['quantity_total'] : $_SESSION['quantity_total'] = "0";
+foreach($pro_id as $pid){
+    echo $pid;
+}
 ?>
 </span></td>
 </tr>
@@ -61,6 +79,7 @@ echo isset($_SESSION['quantity_total']) ? $_SESSION['quantity_total'] : $_SESSIO
 <th>Order Total</th>
 <td><strong><span class="amount">Rs.<?php 
 echo isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_total'] = "0";
+ 
 ?>/-
 </span></strong> </td>
 </tr>
@@ -71,7 +90,12 @@ echo isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_
 </table>
 
 </div><!-- CART TOTALS-->
+<?php
+echo $quant;
+echo $amount;
 
+
+?>
 
  </div><!--Main Content-->
 

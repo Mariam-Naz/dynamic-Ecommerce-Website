@@ -171,12 +171,8 @@ function send_message(){
 
 }
 
-function orders(){
-    if(isset($_POST['submit'])){
-        redirect('thank_you.php');
-    }
 
-}
+
 // ********************************** BACK END *****************************************************************************
 
 
