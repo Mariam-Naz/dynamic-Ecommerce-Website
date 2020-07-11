@@ -22,17 +22,8 @@
 
 <form class="" action="" method="post">
 <?php 
-if(isset($_POST['submit'])){
-    // redirect('thank_you.php');
-    global $pro_id;
-    //  $query = query("INSERT INTO orders(product_order_id,order_quantity,order_date,order_status,order_amount) VALUES('$pro_id[1]' , '$quant', '7-9-2020', 'complete','$amount')");
-    foreach($pro_id as $pid){
-        echo $pid;
-    $query = query("INSERT INTO orders(product_order_id,order_quantity,order_date,order_status,order_amount) VALUES('$pid' , '$quant', '7-9-2020', 'complete','$amount')");
-}
-}
-    ?>
- 
+order($quant,$amount);
+?>
     <table class="table table-striped">
         <thead>
           <tr>
@@ -64,9 +55,7 @@ if(isset($_POST['submit'])){
 <th>Items:</th>
 <td><span class="amount"><?php 
 echo isset($_SESSION['quantity_total']) ? $_SESSION['quantity_total'] : $_SESSION['quantity_total'] = "0";
-foreach($pro_id as $pid){
-    echo $pid;
-}
+
 ?>
 </span></td>
 </tr>
@@ -93,6 +82,9 @@ echo isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_
 <?php
 echo $quant;
 echo $amount;
+foreach($_SESSION['$pro_id'] as $pid){
+    echo "id : ". $pid;
+}
 
 
 ?>
