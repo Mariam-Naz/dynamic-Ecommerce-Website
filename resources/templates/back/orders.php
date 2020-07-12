@@ -1,13 +1,3 @@
-<?php require_once("../../resources/config.php"); ?>
-<?php include(TEMPLATE_BACK . "/header.php"); ?>
-
-        <div id="page-wrapper">
-
-            <div class="container-fluid">
-
-
-                
-
 
         <div class="col-md-12">
 <div class="row">
@@ -47,22 +37,5 @@
     </tbody>
 </table>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-            <!-- /.container-fluid -->
-
-        </div>
-        <!-- /#page-wrapper -->
-
    
 <?php include(TEMPLATE_BACK . "/footer.php"); ?>

@@ -22,7 +22,7 @@
 
 <form class="" action="" method="post">
 <?php 
-order($quant,$amount);
+
 ?>
     <table class="table table-striped">
         <thead>
