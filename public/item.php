@@ -4,9 +4,7 @@
     <!-- Page Content -->
 <div class="container">
 
-       <!-- Side Navigation -->
-
-       <?php include(TEMPLATE_FRONT . DS . "side_nav.php") ?>
+       <!-- Side Navigation --
 
        <?php 
        $query = query("SELECT * FROM products WHERE product_id=". escape($_GET['id']) ."");
