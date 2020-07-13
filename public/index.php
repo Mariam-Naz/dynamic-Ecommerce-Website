@@ -1,5 +1,10 @@
 <?php require_once('../resources/config.php'); ?>
 <?php include(TEMPLATE_FRONT . DS . "header.php") ?>
+<?php 
+if(!isset($_SESSION['username'])){
+    redirect("../../public");
+}
+?>
 
     <!-- Page Content -->
     <div class="container-fluid">

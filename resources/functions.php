@@ -144,7 +144,7 @@ function login_user(){
             redirect('login.php');
         }
         else{
-            set_message("Welcome {$username}");
+            $_SESSION['username'] = $username;
             redirect('admin');
         }
     }
