@@ -1,4 +1,4 @@
-<?php require_once('../resources/config.php'); ?>
+<?php require_once('config.php'); ?>
 <?php 
 if(isset($_GET['add'])){
 
@@ -31,12 +31,12 @@ if(isset($_GET['delete'])){
     unset($_SESSION['quantity_total']);
     redirect('../public/checkout.php');
 }
-$pro_id = [];
-$p_id = [];
+
 function cart(){
 
     $total = 0;
     $total_items = 0;
+    $item_quantity = 0;
     $item_name = 1;
     $item_number = 1;
     $amount = 1;
@@ -45,21 +45,13 @@ function cart(){
         if($value > 0){
             if(substr($name,0, 8) == "product_"){
                 $length = strlen($name)- 8;
-                echo 'len ' . $length;
                 $id = substr($name, 8, $length);
-                echo 'id ' . $id;
-                array_push($GLOBALS['p_id'],$id);
-                // foreach($pro_id as $pid){
-                //     echo "my id: " . $pid;
-                //     $GLOBALS['p_id'] = $pro_id;
-                // }
-             
                 $query = query("SELECT * FROM products WHERE product_id = " . escape($id) . " ");
                 confirm($query);
               
         while($row = mysqli_fetch_array($query)){
             $sub = $row['product_price'] * $value;
-           
+            $item_quantity += $value; 
             $product = <<<DELIMETER
             <tr>
                     <td>{$row['product_title']}</td>
@@ -75,6 +67,7 @@ function cart(){
             <input type="hidden" name="item_number_{$item_number}" value="hat">
             <input type="hidden" name="amount_{$amount}" value="15000">
             <input type="hidden" name="quantity_{$quantity}" value="5">
+
         DELIMETER;
         $_SESSION['individual_quant'] = $value;
         echo $product;
@@ -84,31 +77,51 @@ function cart(){
         $amount++;
         $quantity++;
         }
-        $item_total = $total += $sub;
         $_SESSION['item_total'] = $total += $sub;
         
         $_SESSION['quantity_total'] = $total_items += $value;
+        $_SESSION['item_quantity'] = $item_quantity;
             }   
         }
         
     }
 }
-echo 'my id:';
-foreach($p_id as $pid){
-    echo "my id: " . $pid;
-}
-// function order($amount, $quant){
-//      global $p_id;
-//     foreach ($p_id as $pid){
-//         echo "<script>console.log('fhdgfhg')</script>";
-//     if(isset($_POST['submit'])){
-//         $query = query("INSERT INTO orders(product_order_id,order_quantity,order_date,order_status,order_amount) VALUES('$pid' , '$quant', '7-9-2020', 'complete','$amount')");
-//         confirm($query);
-//         echo "<script>console.log('$pid')</script>";
-//        }
-//     //  $query = query("INSERT INTO orders(product_order_id,order_quantity,order_date,order_status,order_amount) VALUES('$pro_id[1]' , '$quant', '7-9-2020', 'complete','$amount')");
 
-// }
-// }
+function showBuyButton(){
+    if(isset($_SESSION['item_quantity'])){
+    $buy_button = <<<DELIMETER
+    <button type="submit" name="submit" class="btn btn-warning">BUY</button>
+    DELIMETER;
+    return $buy_button;
+    }
+}
+
+
+function reports(){
+
+    $total = 0;
+    $item_quantity = 0;
+    foreach ($_SESSION as $name => $value) {
+        if($value > 0){
+            if(substr($name,0, 8) == "product_"){
+                $length = strlen($name)- 8;
+                $id = substr($name, 8, $length);
+                echo "id: " . $id;
+                $query = query("SELECT * FROM products WHERE product_id = " . escape($id) . " ");
+                confirm($query);
+              
+        while($row = mysqli_fetch_array($query)){
+            $sub = $row['product_price'] * $value;
+            $item_quantity += $value; 
+           
+        }
+        $total += $sub;
+        echo "quantity: " . $item_quantity;
+            }   
+        }
+        
+    }
+}
+
 
 ?>

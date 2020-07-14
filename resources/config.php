@@ -23,7 +23,6 @@ $connection = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 require_once("functions.php");
 require_once("cart.php");
 
-
 //my
 // echo DIRECTORY_SEPARATOR; /
 

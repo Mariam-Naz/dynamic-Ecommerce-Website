@@ -1,11 +1,6 @@
 <!-- Configuration-->
 
 <?php require_once("../resources/config.php"); ?>
-<?php require_once("cart.php"); 
-    $quant = isset($_SESSION['quantity_total']) ? $_SESSION['quantity_total'] : $_SESSION['quantity_total'] = "0";
-    $amount = isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_total'] = "0";
-?>
-
 
 <!-- Header-->
 <?php include(TEMPLATE_FRONT .  "/header.php");?>
@@ -22,7 +17,9 @@
 
 <form class="" action="" method="post">
 <?php 
-
+    if(isset($_POST['submit'])){
+    redirect('thank_you.php');
+    }
 ?>
     <table class="table table-striped">
         <thead>
@@ -38,8 +35,7 @@
          <?php cart(); ?>
         </tbody>
     </table>
-   
-    <button type="submit" name="submit" class="btn btn-warning">BUY</button>
+    <?php echo showBuyButton(); ?>
 </form>
 
 
@@ -79,15 +75,7 @@ echo isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_
 </table>
 
 </div><!-- CART TOTALS-->
-<?php
-echo $quant;
-echo $amount;
-foreach($_SESSION['$pro_id'] as $pid){
-    echo "id : ". $pid;
-}
 
-
-?>
 
  </div><!--Main Content-->
 

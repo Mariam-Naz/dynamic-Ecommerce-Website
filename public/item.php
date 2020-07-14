@@ -4,7 +4,9 @@
     <!-- Page Content -->
 <div class="container">
 
-       <!-- Side Navigation --
+       <!-- Side Navigation -->
+
+       <?php include(TEMPLATE_FRONT . DS . "side_nav.php") ?>
 
        <?php 
        $query = query("SELECT * FROM products WHERE product_id=". escape($_GET['id']) ."");
@@ -52,7 +54,7 @@
    
     <form action="">
         <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="ADD TO CART">
+        <a class="btn btn-primary" href="../resources/cart.php?add={$row['product_id']}">ADD TO CART</a>
         </div>
     </form>
 
