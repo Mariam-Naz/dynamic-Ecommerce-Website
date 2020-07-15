@@ -97,7 +97,7 @@ function showBuyButton(){
 }
 
 
-function reports(){
+function orders(){
 
     $total = 0;
     $item_quantity = 0;
@@ -111,9 +111,12 @@ function reports(){
                 confirm($query);
               
         while($row = mysqli_fetch_array($query)){
+            $product_price = $row['product_price'];
+            $product_img = $row['product_image'];
             $sub = $row['product_price'] * $value;
             $item_quantity += $value; 
            
+            $insert_reports = query("INSERT INTO orders(product_id, product_price, product_quantity , product_img) VALUES('{$id}' , '{$product_price}' , '{$value}' , '{$product_img}' )");
         }
         $total += $sub;
         echo "quantity: " . $item_quantity;

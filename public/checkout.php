@@ -19,6 +19,7 @@
 <?php 
     if(isset($_POST['submit'])){
     redirect('thank_you.php');
+    orders();
     }
 ?>
     <table class="table table-striped">
