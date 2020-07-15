@@ -1,9 +1,10 @@
 <?php require_once("../../resources/config.php"); ?>
 <?php include(TEMPLATE_BACK . "/header.php"); ?>
 <?php 
-if(!isset($_SESSION['username'])){
+if(!empty($_SESSION['username'])){
     redirect("../../public");
 }
+
 ?>
 
         <div id="page-wrapper">
@@ -25,7 +26,7 @@ if(!isset($_SESSION['username'])){
                 </div>
                 <!-- /.row -->
                 <?php 
-                    if($_SERVER['REQUEST_URI'] == "/ecom/public/admin/"|| $_SERVER['REQUEST_URI']=="/ecom/public/admin/index.php"){
+                    if($_SERVER['REQUEST_URI'] == "/dynamic-Ecommerce-Website/public/admin/"|| $_SERVER['REQUEST_URI']=="/dynamic-Ecommerce-Website/public/admin/index.php"){
                         include(TEMPLATE_BACK . "/admin_content.php");
                     }               
                     if(isset($_GET['orders'])){

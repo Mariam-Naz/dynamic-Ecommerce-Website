@@ -116,7 +116,7 @@ echo $product;
             $product = <<< DELIMETER
             <div class="col-md-3 col-sm-6 hero-feature">
             <div class="thumbnail">
-                <img  style="height: 145px"; class='img-size' src= $row[product_image] alt="">
+                <img class='img-size' src= $row[product_image] alt="">
                 <div class="caption">
                     <h3>$row[product_title]</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -127,7 +127,7 @@ echo $product;
             </div>
         </div>
 
-DELIMETER;
+    DELIMETER;
 echo $product;
         }
 
@@ -175,5 +175,27 @@ function send_message(){
 
 // ********************************** BACK END *****************************************************************************
 
+function displayOrders(){
+    $query = query("SELECT * FROM orders");
+    confirm($query);
 
+    while($row = mysqli_fetch_array($query)){
+        
+        
+            // $query = query("DELETE FROM orders WHERE order_id = ". escape($_GET['id']) ."");
+            // confirm($query);
+        $orders = <<<DELIMETER
+        <tr>
+        <td>{$row['order_id']}</td>
+        <td>{$row['product_title']}</td>
+        <td> <img style="height:15px; width:62px;" src= {$row['product_img']} alt="img"></td>
+        <td>{$row['product_quantity']}</td>
+        <td>{$row['product_price']}</td>
+        <td><a class='btn btn-danger' href="../../resources/templates/back/delete.php?id={$row['order_id']}"><span class = 'glyphicon glyphicon-remove'></span></a></td>
+        </tr>
+        DELIMETER;
+        echo $orders;
+    }
+   
+}
 ?>

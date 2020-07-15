@@ -2,7 +2,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color:rgb(224, 225, 226);
+    background-color:rgb(241, 242, 243);
 }
 .caption{
     height: 165px;
@@ -19,6 +19,19 @@ body{
     color:white;
    
 }
+
+.btn {
+    display: inline-block;
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    line-height: 1;
+    margin: 0 1rem;
+    transition: .3s;
+    text-transform: uppercase;
+}
+
 
 /* navbar */
 .nav-confluid{
@@ -66,7 +79,7 @@ header{
 }
 
 .logo{
-    color: rgb(0, 0, 0);
+    color: #69bde7;
     font-size: 3.5rem;
     font-weight: 900;
     letter-spacing: 2px;
@@ -78,7 +91,7 @@ header{
     font-weight: 900;
 }
 
-.btn{
+.btn-nav{
     display: inline-block;
     padding: 1rem 1.8rem;
     font-size: 1rem;
@@ -160,7 +173,7 @@ header{
 }
 
 .dropdown-link:hover > a{
-    background-color: #000000;
+    background-color: #69bde7;
     color: #fff;
 }
 
@@ -441,11 +454,11 @@ header{
 
 /* logo-animation */
 .logo{
-    animation: type 3s infinite steps(20);
+    animation: type 5s infinite steps(16);
     overflow: hidden;
     white-space: nowrap;
     font-family: consolas;
-    border-right: 8px solid rgb(252, 252, 255);
+    border-right: 10px solid #69bde7;
     width: 10ch;
 }
 

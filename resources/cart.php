@@ -90,7 +90,7 @@ function cart(){
 function showBuyButton(){
     if(isset($_SESSION['item_quantity'])){
     $buy_button = <<<DELIMETER
-    <button type="submit" name="submit" class="btn btn-warning">BUY</button>
+    <button type="submit" name="submit" class="btn btn-primary">BUY NOW!</button>
     DELIMETER;
     return $buy_button;
     }
@@ -112,11 +112,12 @@ function orders(){
               
         while($row = mysqli_fetch_array($query)){
             $product_price = $row['product_price'];
+            $product_title = $row['product_title'];
             $product_img = $row['product_image'];
             $sub = $row['product_price'] * $value;
             $item_quantity += $value; 
            
-            $insert_reports = query("INSERT INTO orders(product_id, product_price, product_quantity , product_img) VALUES('{$id}' , '{$product_price}' , '{$value}' , '{$product_img}' )");
+            $insert_orders = query("INSERT INTO orders(product_id, product_price, product_title, product_quantity , product_img) VALUES('{$id}' , '{$product_price}' , '{$product_title}' , '{$value}' , '{$product_img}' )");
         }
         $total += $sub;
         echo "quantity: " . $item_quantity;
@@ -124,6 +125,7 @@ function orders(){
         }
         
     }
+  
 }
 
 

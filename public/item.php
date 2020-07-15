@@ -54,7 +54,7 @@
    
     <form action="">
         <div class="form-group">
-        <a class="btn btn-primary" href="../resources/cart.php?add={$row['product_id']}">ADD TO CART</a>
+      <?php  echo "<a class='btn btn-primary' href= '../resources/cart.php?add={$row['product_id']}'>ADD TO CART</a>"?>
         </div>
     </form>
 
