@@ -10,8 +10,9 @@ body{
 .thumbnail a img{
     height: 145px;
 }
-.img-size img{
-    height: 145px;
+.img-size{
+    width: 320px;
+    height: 150px;
 }
 .cust-thumb .thumbnail:hover{
     transition:0.3s;

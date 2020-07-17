@@ -41,6 +41,9 @@ if(!empty($_SESSION['username'])){
                     if(isset($_GET['add_product'])){
                         include(TEMPLATE_BACK . "/add_product.php");
                     }
+                    if(isset($_GET['edit_product'])){
+                        include(TEMPLATE_BACK . "/edit_product.php");
+                    }
                 ?>
 
                  <!-- FIRST ROW WITH PANELS -->

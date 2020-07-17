@@ -12,7 +12,7 @@
 
 <form action="" method="post" enctype="multipart/form-data">
 
-
+<?php addProducts(); ?>
 <div class="col-md-8">
 
 <div class="form-group">
@@ -40,9 +40,7 @@
 
 
 
-    
-    
-
+  
 </div><!--Main Content-->
 
 
@@ -64,11 +62,21 @@
          <label for="product-title">Product Category</label>
           <hr>
         <select name="product_category" id="" class="form-control">
-            <option value="">Select Category</option>
+            <option value="1">Laptops</option>
+            <option value="2">Mobiles</option>
+            <option value="3">Computers</option>
            
         </select>
 
 
+</div>
+
+
+ <!-- Product Quantity-->
+
+ <div class="form-group">
+ <label for="product-quantity">Product Qantity</label>
+        <input type="number" name="product_quantity" class="form-control">
 </div>
 
 
@@ -78,22 +86,22 @@
     <!-- Product Brands-->
 
 
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="product-title">Product Brand</label>
          <select name="product_brand" id="" class="form-control">
             <option value="">Select Brand</option>
          </select>
-    </div>
+    </div> -->
 
 
 <!-- Product Tags -->
 
 
-    <div class="form-group">
+    <!-- <div class="form-group">
           <label for="product-title">Product Keywords</label>
           <hr>
         <input type="text" name="product_tags" class="form-control">
-    </div>
+    </div> -->
 
     <!-- Product Image -->
     <div class="form-group">
