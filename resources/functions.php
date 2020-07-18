@@ -50,7 +50,7 @@
 <div class="cust-thumb">
 <div class="thumbnail">
 
-<a href='item.php?id={$row['product_id']}'><img src=$row[product_image] alt=""></a>
+<a href='item.php?id={$row['product_id']}'><img src=../resources/uploads/$row[product_image] alt=""></a>
 <div class="caption">
     <h4 class="pull-right">Rs. $row[product_price]</h4>
     
@@ -91,7 +91,7 @@ echo $categoryLinks;
             $product = <<< DELIMETER
             <div class="col-md-3 col-sm-6 hero-feature">
             <div class="thumbnail">
-                <img style="width: 320px; height: 170px;" src= $row[product_image] alt="">
+                <img style="width: 320px; height: 170px;" src= ../resources/uploads/$row[product_image] alt="">
                 <div class="caption">
                     <h3>$row[product_title]</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -188,7 +188,7 @@ function displayOrders(){
         <tr>
         <td>{$row['order_id']}</td>
         <td>{$row['product_title']}</td>
-        <td> <img style="height:62px; width:62px;" src= {$row['product_img']} alt="img"></td>
+        <td> <img style="height:62px; width:62px;" src= src=../../resources/uploads/{$row['product_img']} alt="img"></td>
         <td>{$row['product_quantity']}</td>
         <td>{$row['product_price']}</td>
         <td><a class='btn btn-danger' href="../../resources/templates/back/delete.php?id={$row['order_id']}"><span class = 'glyphicon glyphicon-remove'></span></a></td>
@@ -210,7 +210,7 @@ function displayProducts(){
         <tr>
         <td>{$row['product_id']}</td>
         <td>{$row['product_title']}<br>
-        <a href = 'index.php?edit_product&id={$row['product_id']}'><img src={$row['product_image']} alt={$row['product_title']} style="width: 320px; height: 170px;"></a>
+        <a href = 'index.php?edit_product&id={$row['product_id']}'><img src=../../resources/uploads/{$row['product_image']} alt={$row['product_title']} style="width: 320px; height: 170px;"></a>
         </td>
         <td>{$row['cat_title']}</td>
         <td>{$row['product_price']}</td>
@@ -230,13 +230,7 @@ function addProducts(){
         $product_title = escape($_POST['product_title']);
         $product_description = escape($_POST['product_description']);
         $product_price = escape($_POST['product_price']);
-        $product_category = $_POST['product_category'];
-        $product_category_query = query("SELECT * FROM categories WHERE cat_title=$product_category");
-        confirm($product_category_query);
-        while($row = mysqli_fetch_array($product_category_query)){
-            $_SESSION['product_category_id'] = $row['cat_id'];
-        }
-        $product_category_id = $_SESSION['product_category_id'];
+        $product_category_id = $_POST['product_category'];
         $product_quantity = escape($_POST['product_quantity']);
         $product_image = escape($_FILES['file']['name']);
         $product_image_location = escape($_FILES['file']['tmp_name']);
