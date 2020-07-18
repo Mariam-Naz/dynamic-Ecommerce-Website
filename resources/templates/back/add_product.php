@@ -62,10 +62,8 @@
          <label for="product-title">Product Category</label>
           <hr>
         <select name="product_category" id="" class="form-control">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
            
+            <?php showCategories(); ?>
         </select>
 
 

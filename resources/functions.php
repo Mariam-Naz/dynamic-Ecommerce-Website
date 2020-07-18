@@ -47,18 +47,14 @@
             $product = <<< DELIMETER
 
 <div class="col-sm-12 col-lg-4 col-md-4">
-<div class="cust-thumb">
-<div class="thumbnail">
-
-<a href='item.php?id={$row['product_id']}'><img src=../resources/uploads/$row[product_image] alt=""></a>
-<div class="caption">
-    <h4 class="pull-right">Rs. $row[product_price]</h4>
-    
-    <h4><a href="item.php?id={$row['product_id']}">$row[product_title]</a>
-    </h4>
-    <p>$sub_desc ...<a href='item.php'> Read more</a></p>
+<div class="card-deck">
+<div class='card'>
+<a href='item.php?id={$row['product_id']}'><img  class="card-img-top" style="width: 290px; height: 170px;"  src=../resources/uploads/$row[product_image] alt="$row[product_title]"></a>
+<div class="card-body">
+    <h4 class='card-title'><a href="item.php?id={$row['product_id']}">$row[product_title]</a></h4>
+    <h4  class="card-text"><small class="text-muted">Rs. $row[product_price]</small></h4>
    <a class="btn btn-primary" target="_blank" href="../resources/cart.php?add={$row['product_id']}">ADD TO CART</a>
-</div>
+   </div>
 </div>
 </div>
 </div>
@@ -188,7 +184,7 @@ function displayOrders(){
         <tr>
         <td>{$row['order_id']}</td>
         <td>{$row['product_title']}</td>
-        <td> <img style="height:62px; width:62px;" src= src=../../resources/uploads/{$row['product_img']} alt="img"></td>
+        <td> <img style="height:62px; width:62px;" src=../../resources/uploads/{$row['product_img']} alt="img"></td>
         <td>{$row['product_quantity']}</td>
         <td>{$row['product_price']}</td>
         <td><a class='btn btn-danger' href="../../resources/templates/back/delete.php?id={$row['order_id']}"><span class = 'glyphicon glyphicon-remove'></span></a></td>
@@ -230,7 +226,7 @@ function addProducts(){
         $product_title = escape($_POST['product_title']);
         $product_description = escape($_POST['product_description']);
         $product_price = escape($_POST['product_price']);
-        $product_category_id = $_POST['product_category'];
+        $product_category_id= escape($_POST['product_category']);
         $product_quantity = escape($_POST['product_quantity']);
         $product_image = escape($_FILES['file']['name']);
         $product_image_location = escape($_FILES['file']['tmp_name']);
@@ -242,4 +238,23 @@ function addProducts(){
     }
 }
 
+// function getCatId($catTitle){
+//     $query = query("SELECT cat_id FROM categories WHERE cat_title = $catTitle");
+//     confirm($query);
+//     while($row = mysqli_fetch_array($query)){
+//         return $row['cat_id'];
+//     }
+// }
+
+function showCategories(){
+    $query = query("SELECT * FROM categories");
+    confirm($query);
+    while($row = mysqli_fetch_array($query)){
+        $category = <<< DELIMETER
+        <option value="{$row['cat_id']}">{$row['cat_title']}</option>
+        DELIMETER;
+        echo $category;
+    }
+    
+}
 ?>

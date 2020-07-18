@@ -4,20 +4,22 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color:rgb(241, 242, 243);
 }
-.caption{
-    height: 165px;
-}
-.thumbnail a img{
-    height: 145px;
-}
+
+
 .img-size{
     width: 320px;
     height: 150px;
 }
-.cust-thumb .thumbnail:hover{
+.card{
+    background-color:#fff;
+    text-align:center;
+    padding-top: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 6%;
+}
+.card:hover{
     transition:0.3s;
     box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.158);
-    color:white;
    
 }
 
@@ -33,7 +35,22 @@ body{
     text-transform: uppercase;
 }
 
-
+/* praise */
+.card-praise{
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.6);
+    transition: 0.4s;
+    background-color:#fff;
+    text-align:center;
+    font-family: sans-serif;
+    /* float: left; */
+    padding-top: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 6%;
+    color:black;
+}
+i{
+    font-size: 2rem;
+}
 /* navbar */
 .nav-confluid{
   padding: 0;
@@ -470,4 +487,61 @@ header{
     100%{
        width: 10ch;
     }
+}
+
+/* animated buy button */
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+.description, .link {
+  font-family: 'Amatic SC', cursive;
+}
+
+.btn-buy {
+  border: none;
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  background-color: rgb(252, 182, 32);
+  padding: 10px 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn-buy span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn-buy:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 160%;
+  background: #69bde7;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn-buy:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.link {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.link a {
+  color: #000;
+  font-size: 25px; 
 }

@@ -90,7 +90,7 @@ function cart(){
 function showBuyButton(){
     if(isset($_SESSION['item_quantity'])){
     $buy_button = <<<DELIMETER
-    <button type="submit" name="submit" class="btn btn-primary">BUY NOW!</button>
+    <button type='submit' name='submit' class="btn-buy"><span>BUY NOW!</span></button>
     DELIMETER;
     return $buy_button;
     }
