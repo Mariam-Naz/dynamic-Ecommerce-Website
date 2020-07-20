@@ -176,10 +176,6 @@ function displayOrders(){
     confirm($query);
 
     while($row = mysqli_fetch_array($query)){
-        
-        
-            // $query = query("DELETE FROM orders WHERE order_id = ". escape($_GET['id']) ."");
-            // confirm($query);
         $orders = <<<DELIMETER
         <tr>
         <td>{$row['order_id']}</td>
@@ -205,8 +201,8 @@ function displayProducts(){
         $product = <<< DELIMETER
         <tr>
         <td>{$row['product_id']}</td>
-        <td>{$row['product_title']}<br>
-        <a href = 'index.php?edit_product&id={$row['product_id']}'><img src=../../resources/uploads/{$row['product_image']} alt={$row['product_title']} style="width: 320px; height: 170px;"></a>
+        <td><a href = 'index.php?edit_product&id={$row['product_id']}'>{$row['product_title']}</a><br>
+        <a href = 'index.php?edit_product&id={$row['product_id']}'><img style="width: 100px" src=../../resources/uploads/{$row['product_image']} alt={$row['product_title']} ></a>
         </td>
         <td>{$row['cat_title']}</td>
         <td>{$row['product_price']}</td>
@@ -222,7 +218,6 @@ function displayProducts(){
 function addProducts(){
 
     if(isset($_POST['publish'])){
-        $_SESSION['product_category_id']= 0;
         $product_title = escape($_POST['product_title']);
         $product_description = escape($_POST['product_description']);
         $product_price = escape($_POST['product_price']);
@@ -230,7 +225,6 @@ function addProducts(){
         $product_quantity = escape($_POST['product_quantity']);
         $product_image = escape($_FILES['file']['name']);
         $product_image_location = escape($_FILES['file']['tmp_name']);
-       
         move_uploaded_file($product_image_location , UPLOAD_DIR . DS . $product_image);
         $query = query("INSERT INTO products(product_title, product_category_id, product_price, product_quantity, product_description, product_image) VALUES('{$product_title}' , '{$product_category_id}' , '{$product_price}' , '{$product_quantity}' , '{$product_description}' , '{$product_image}')" );
         confirm($query);
@@ -238,13 +232,6 @@ function addProducts(){
     }
 }
 
-// function getCatId($catTitle){
-//     $query = query("SELECT cat_id FROM categories WHERE cat_title = $catTitle");
-//     confirm($query);
-//     while($row = mysqli_fetch_array($query)){
-//         return $row['cat_id'];
-//     }
-// }
 
 function showCategories(){
     $query = query("SELECT * FROM categories");
@@ -256,5 +243,31 @@ function showCategories(){
         echo $category;
     }
     
+}
+
+function editProducts(){
+
+    if(isset($_POST['update'])){
+        $product_title = escape($_POST['product_title']);
+        $product_description = escape($_POST['product_description']);
+        $product_price = escape($_POST['product_price']);
+        $product_category_id= escape($_POST['product_category']);
+        $product_quantity = escape($_POST['product_quantity']);
+        $product_image = escape($_FILES['file']['name']);
+        $product_image_location = escape($_FILES['file']['tmp_name']);
+
+        if(empty($product_image)){
+            $get_image = query("SELECT product_image FROM products WHERE product_id= ". escape($_GET['id']) ."");
+            confirm($get_image);
+            while($row = mysqli_fetch_array($get_image)){
+                $product_image = $row['product_image'];
+            }
+        }
+        move_uploaded_file($product_image_location , UPLOAD_DIR . DS . $product_image);
+        $query = query("UPDATE products
+        SET product_title='{$product_title}', product_category_id='{$product_category_id}', product_price='{$product_price}', product_quantity='{$product_quantity}', product_description='{$product_description}', product_image='{$product_image}' WHERE product_id = ". escape($_GET['id']) ." ");
+        confirm($query);
+        redirect('index.php?products');
+    }
 }
 ?>

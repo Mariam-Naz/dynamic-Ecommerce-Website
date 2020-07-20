@@ -54,7 +54,8 @@ function cart(){
             $item_quantity += $value; 
             $product = <<<DELIMETER
             <tr>
-                    <td>{$row['product_title']}</td>
+                    <td>{$row['product_title']}<br>
+                   <img style="width: 100px" src=../resources/uploads/{$row['product_image']} alt={$row['product_title']} style="width: 320px; height: 170px;"></td>
                     <td>Rs.{$row['product_price']}/-</td>
                     <td>{$value}</td>
                     <td>{$sub}</td>
@@ -125,7 +126,7 @@ function orders(){
         }
         
     }
-  
+  session_destroy();
 }
 
 
