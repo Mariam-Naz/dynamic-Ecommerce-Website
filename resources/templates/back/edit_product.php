@@ -81,7 +81,7 @@ if(isset($_GET['id'])){
          <label for="product-title">Product Category</label>
           <hr>
         <select name="product_category" id="" class="form-control">
-           <option value =''>Select Categories</option>
+           <option value ='<?php echo $product_category_id ?>'><?php echo showCategoryTitle($product_category_id) ?></option>
             <?php showCategories(); ?>
         </select>
 

@@ -270,4 +270,38 @@ function editProducts(){
         redirect('index.php?products');
     }
 }
+
+function showCategoryTitle($cat_id){
+    $query = query("SELECT * FROM categories WHERE cat_id = $cat_id");
+    confirm($query);
+    while($row = mysqli_fetch_array($query)){
+        return $row['cat_title'];
+    }
+}
+
+function showCategoriesInCategoryPage(){
+    $query = query("SELECT * FROM categories");
+    confirm($query);
+    while($row = mysqli_fetch_array($query)){
+        $category = <<< DELIMETER
+        <tr>
+            <td>{$row['cat_id']}</td>
+            <td>{$row['cat_title']}</td>
+            <td><a class='btn btn-danger' href="../../resources/templates/back/delete_category.php?id={$row['cat_id']}"><span class = 'glyphicon glyphicon-remove'></span></a></td>
+        </tr>
+        DELIMETER;
+        echo $category;
+    }
+    
+}
+
+function addcategories(){
+    if(isset($_POST['submit'])){
+        $category_title = escape($_POST['category_title']);
+        $query = query("INSERT INTO categories(cat_title) VALUES('{$category_title}')" );
+        confirm($query);
+        redirect('index.php?categories');
+        set_message("Category Added");
+    }
+}
 ?>
