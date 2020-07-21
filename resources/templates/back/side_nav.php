@@ -17,6 +17,9 @@
             <a href="index.php?categories"><i class="fa fa-fw fa-desktop"></i> Categories</a>
         </li>
         <li>
+            <a href="index.php?slider"><i class="fa fa-fw fa-desktop"></i> Slider</a>
+        </li>
+        <li>
             <a href="index.php?users"><i class="fa fa-fw fa-wrench"></i>Users</a>
         </li>
     

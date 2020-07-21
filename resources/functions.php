@@ -167,6 +167,23 @@ function send_message(){
 
 }
 
+function showSliderInFront(){
+    $slider_sql = query("SELECT * FROM slider limit 1");
+        confirm($slider_sql);
+        while($slider_row=mysqli_fetch_array($slider_sql)){
+          echo "<div class='item active' data-wrap='true' data-interval='1000'>
+          <img class= 'slide-image' style='width:1500px; height:450px;' src='../resources/slider-imgs/$slider_row[slider_image]' alt='$slider_row[slider_title]'>
+          </div>";
+        }
+        
+        $slider_sql = query("SELECT * FROM slider limit 1,3");
+        confirm($slider_sql);
+        while($slider_row=mysqli_fetch_array($slider_sql)){
+          echo "<div class='item' data-wrap='true' data-interval='1000'>
+          <img class= 'slide-image' style='width:1500px; height:450px;' src='../resources/slider-imgs/$slider_row[slider_image]'  alt='$slider_row[slider_title]'>
+          </div>";
+        }
+}
 
 
 // ********************************** BACK END *****************************************************************************
@@ -304,4 +321,36 @@ function addcategories(){
         set_message("Category Added");
     }
 }
+
+
+function addSlider(){
+
+    if(isset($_POST['submit'])){
+        $slider_title = escape($_POST['slider_title']);
+        $slider_image = escape($_FILES['file']['name']);
+        $slider_image_location = escape($_FILES['file']['tmp1_name']);
+        move_uploaded_file($slider_image_location , SLIDER_DIR . DS . $slider_image);
+        $query = query("INSERT INTO slider(slider_title , slider_image) VALUES('{$slider_title}' , '{$slider_image}')" );
+        confirm($query);
+        redirect('index.php?slider');
+    }
+
+}
+
+function showSlider(){
+    $query = query("SELECT * FROM slider");
+    confirm($query);
+    while($row = mysqli_fetch_array($query)){
+        $slide = <<< DELIMETER
+        <tr>
+            <td>{$row['slider_id']}</td>
+            <td>{$row['slider_title']}</td>
+            <td><img style='width:400px; height: 200px'  src=../../resources/slider-imgs/{$row['slider_image']} alt={$row['slider_title']} ></td>
+        </tr>
+        DELIMETER;
+        echo $slide;
+    }
+}
+
+
 ?>

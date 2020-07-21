@@ -12,6 +12,8 @@ defined("TEMPLATE_BACK") ? null : define("TEMPLATE_BACK",__DIR__ . DS . "templat
 
 defined("UPLOAD_DIR") ? null : define("UPLOAD_DIR",__DIR__ . DS . "uploads");
 
+defined("SLIDER_DIR") ? null : define("SLIDER_DIR",__DIR__ . DS . "slider-imgs");
+
 defined("DB_HOST") ? null : define("DB_HOST","localhost"); 
 
 defined("DB_USER") ? null : define("DB_USER", "root");

@@ -4,18 +4,12 @@
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     </ol>
-    <div class="carousel-inner">
-        <div class="item active">
-            <img class="slide-image" src="http://placehold.it/800x300" alt="">
-        </div>
-        <div class="item">
-            <img class="slide-image" src="http://placehold.it/800x300" alt="">
-        </div>
-        <div class="item">
-            <img class="slide-image" src="http://placehold.it/800x300" alt="">
-        </div>
+    <div class="carousel-inner" role="listbox" style="height: 450px;">
+    <?php
+        showSliderInFront();
+      ?>
     </div>
-    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
     <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">

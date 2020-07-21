@@ -32,6 +32,9 @@ if(isset($_SESSION['username'])){
                     if(isset($_GET['edit_product'])){
                         include(TEMPLATE_BACK . "/edit_product.php");
                     }
+                    if(isset($_GET['slider'])){
+                        include(TEMPLATE_BACK . "/slider.php");
+                    }
                 ?>
 
                  <!-- FIRST ROW WITH PANELS -->
