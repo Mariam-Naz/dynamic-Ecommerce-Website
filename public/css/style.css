@@ -51,11 +51,21 @@ body{
 i{
     font-size: 2rem;
 }
+.jumbotron{
+    background-color: transparent;
+}
 
 /* contact */
 .contact{
     padding-top: 3%;
     color: rgb(138, 138, 138)
+}
+
+.latest-cont{
+    text-align: center;
+    background-color:#dc3545;
+    color: white;
+    margin-bottom: 3%;
 }
 /* navbar */
 .nav-confluid{

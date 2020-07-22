@@ -37,24 +37,22 @@
         return mysqli_real_escape_string($connection,$string);
     }
 // ********************************** FRONT END *****************************************************************************
-    function get_products(){
-        $query = query('SELECT * FROM products');
-        confirm($query);
+function get_products(){
+$query = query('SELECT * FROM products');
+confirm($query);
 
-        while($row = mysqli_fetch_array($query)){
-            $desc = $row['product_description'];
-            $sub_desc = substr($desc,0,100);
-            $product = <<< DELIMETER
+while($row = mysqli_fetch_array($query)){
+    $product = <<< DELIMETER
 
 <div class="col-sm-12 col-lg-4 col-md-4">
 <div class="card-deck">
 <div class='card'>
-<a href='item.php?id={$row['product_id']}'><img  class="card-img-top" style="width: 290px; height: 170px;"  src=../resources/uploads/$row[product_image] alt="$row[product_title]"></a>
+    <a href='item.php?id={$row['product_id']}'><img  class="card-img-top" style="width: 100%; height: 170px;"  src=../resources/uploads/$row[product_image] alt="$row[product_title]"></a>
 <div class="card-body">
     <h4 class='card-title'><a href="item.php?id={$row['product_id']}">$row[product_title]</a></h4>
     <h4  class="card-text"><small class="text-muted">Rs. $row[product_price]</small></h4>
-   <a class="btn btn-primary" target="_blank" href="../resources/cart.php?add={$row['product_id']}">ADD TO CART</a>
-   </div>
+    <a class="btn btn-primary" target="_blank" href="../resources/cart.php?add={$row['product_id']}">ADD TO CART</a>
+</div>
 </div>
 </div>
 </div>
@@ -77,53 +75,29 @@ echo $categoryLinks;
         }
     }
 
-    function goto_category(){
-        $query = query("SELECT * FROM products WHERE product_category_id = ". escape($_GET['id']) ."");
-        confirm($query);
+function goto_category(){
+$query = query("SELECT * FROM products WHERE product_category_id = ". escape($_GET['id']) ."");
+confirm($query);
 
-        while($row = mysqli_fetch_array($query)){
-            $desc = $row['product_description'];
-            $sub_desc = substr($desc,0,100);
-            $product = <<< DELIMETER
-            <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img style="width: 320px; height: 170px;" src= ../resources/uploads/$row[product_image] alt="">
-                <div class="caption">
-                    <h3>$row[product_title]</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <p>
-                        <a href="#" class="btn btn-primary">Buy Now!</a> <a href="item.php?id={$row['product_id']}" class="btn btn-default">More Info</a>
-                    </p>
-                </div>
-            </div>
-        </div>
+while($row = mysqli_fetch_array($query)){
+$desc = $row['product_description'];
+$sub_desc = substr($desc,0,100);
+$product = <<< DELIMETER
+<div class="col-md-3 col-sm-12">
+<div class="card-deck">
+<div class='card'>
+<a href='item.php?id={$row['product_id']}'><img  class="card-img-top" style="width: 100%; height: 170px;"  src=../resources/uploads/$row[product_image] alt="$row[product_title]"></a>
+<div class="card-body">
+    <h4 class='card-title'><a href="item.php?id={$row['product_id']}">$row[product_title]</a></h4>
+    <p class="card-text">$sub_desc <a href="item.php?id={$row['product_id']}">Read more...</a></p>
+    <h4  class="card-text"><small class="text-muted">Rs. $row[product_price]</small></h4>
+   <a class="btn btn-primary" target="_blank" href="../resources/cart.php?add={$row['product_id']}">ADD TO CART</a>
+</div>
+</div>
+</div>
+</div>
 
 DELIMETER;
-echo $product;
-        }
-
-    }
-
-    function goto_shop(){
-        $query = query("SELECT * FROM products");
-        confirm($query);
-
-        while($row = mysqli_fetch_array($query)){
-            $product = <<< DELIMETER
-            <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img class='img-size' src= $row[product_image] alt="">
-                <div class="caption">
-                    <h3>$row[product_title]</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <p>
-                        <a href="#" class="btn btn-primary">Buy Now!</a> <a href="item.php?id={$row['product_id']}" class="btn btn-default">More Info</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    DELIMETER;
 echo $product;
         }
 
