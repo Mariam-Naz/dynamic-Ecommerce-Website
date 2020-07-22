@@ -1,44 +1,26 @@
 <?php require_once('../resources/config.php'); ?>
 <?php include(TEMPLATE_FRONT . DS . "header.php") ?>
-
     <!-- Page Content -->
-<div class="container">
+<div class="container-fluid item-cont">
+    <?php 
+    $query = query("SELECT * FROM products WHERE product_id=". escape($_GET['id']) ."");
+    confirm($query);
+    while($row = mysqli_fetch_array($query)){
+    ?>
+    <div class="col-md-12">
+        <!--Row For Image and Short Description-->
+        <div class="row">
+            <div class="col-md-9">
+                <img class='img-responsive' style="width:1200px; height:430px" src=../resources/uploads/<?php echo $row['product_image']?> alt='avatar'?>
+            </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <div class="caption-full">
+                    <h4><a href="#"><?php echo $row['product_title']?></a> </h4>
+            <hr>
+                    <h4>Rs. <?php echo $row['product_price']?></h4>
 
-       <!-- Side Navigation -->
-
-       <?php include(TEMPLATE_FRONT . DS . "side_nav.php") ?>
-
-       <?php 
-       $query = query("SELECT * FROM products WHERE product_id=". escape($_GET['id']) ."");
-       confirm($query);
-
-       while($row = mysqli_fetch_array($query)){
-      
-       ?>
-
-<div class="col-md-9">
-
-<!--Row For Image and Short Description-->
-
-<div class="row">
-
-    <div class="col-md-7">
-     <img class='img-responsive' src=../resources/uploads/<?php echo $row['product_image']?> alt='avatar'?>
-
-    </div>
-
-    <div class="col-md-5">
-
-        <div class="thumbnail">
-         
-
-    <div class="caption-full">
-        <h4><a href="#"><?php echo $row['product_title']?></a> </h4>
-        <hr>
-        <h4 class="">Rs. <?php echo $row['product_price']?></h4>
-
-    <div class="ratings">
-     
+    <!-- <div class="ratings">
         <p>
             <span class="glyphicon glyphicon-star"></span>
             <span class="glyphicon glyphicon-star"></span>
@@ -47,9 +29,8 @@
             <span class="glyphicon glyphicon-star-empty"></span>
             4.0 stars
         </p>
-    </div>
-          
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    </div> -->
+        <p><?php echo $row['product_description'] ?></p> 
 
    
     <form action="">
@@ -63,14 +44,8 @@
 </div>
 
 </div>
-
-
-</div><!--Row For Image and Short Description-->
-
-
+        </div><!--Row For Image and Short Description-->
         <hr>
-
-
 <!--Row for Tab Panel-->
 
 <div class="row">
@@ -90,12 +65,7 @@
 
 <p></p>
            
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    <p><?php echo $row['product_long_description'] ?></p>
 
     </div>
     <div role="tabpanel" class="tab-pane" id="profile">

@@ -6,7 +6,8 @@ if(isset($_GET['id'])){
   while($row = mysqli_fetch_array($query)){
 
   $product_title = escape($row['product_title']);
-  $product_description = escape($row['product_description']);
+  $product_introduction = escape($row['product_description']);
+  $product_description = escape($row['product_long_description']);
   $product_price = escape($row['product_price']);
   $product_category_id= escape($row['product_category_id']);
   $product_quantity = escape($row['product_quantity']);
@@ -46,7 +47,10 @@ if(isset($_GET['id'])){
       <textarea name="product_description" cols="30" rows="10" class="form-control"><?php echo $product_description ?></textarea>
     </div>
 
-
+    <div class="form-group">
+           <label for="product-title">Product introduction</label>
+      <textarea name="product_introduction" id="" rows="5" class="form-control"><?php echo $product_introduction ?></textarea>
+    </div>
 
     <div class="form-group row">
 
@@ -56,10 +60,6 @@ if(isset($_GET['id'])){
       </div>
     </div>
 
-
-
-
-  
 </div><!--Main Content-->
 
 

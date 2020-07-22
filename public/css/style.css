@@ -4,8 +4,6 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color:rgb(241, 242, 243);
 }
-
-
 .img-size{
     width: 320px;
     height: 150px;
@@ -22,7 +20,6 @@ body{
     box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.158);
    
 }
-
 .btn {
     display: inline-block;
     padding: 1rem 1.8rem;
@@ -66,6 +63,10 @@ i{
     background-color:#dc3545;
     color: white;
     margin-bottom: 3%;
+}
+/* item */
+.item-cont{
+    margin-top: 3%;
 }
 /* navbar */
 .nav-confluid{
