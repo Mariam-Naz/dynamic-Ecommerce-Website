@@ -51,6 +51,7 @@ function cart(){
               
         while($row = mysqli_fetch_array($query)){
             $sub = $row['product_price'] * $value;
+            $_SESSION['product_title'] = $row['product_title'];
             $item_quantity += $value; 
             $product = <<<DELIMETER
             <tr>
@@ -79,7 +80,6 @@ function cart(){
         $quantity++;
         }
         $_SESSION['item_total'] = $total += $sub;
-        
         $_SESSION['quantity_total'] = $total_items += $value;
         $_SESSION['item_quantity'] = $item_quantity;
             }   
@@ -99,7 +99,6 @@ function showBuyButton(){
 
 
 function orders(){
-
     $total = 0;
     $item_quantity = 0;
     foreach ($_SESSION as $name => $value) {
@@ -126,8 +125,5 @@ function orders(){
         }
         
     }
-  session_destroy();
 }
-
-
 ?>

@@ -68,6 +68,12 @@ i{
 .item-cont{
     margin-top: 3%;
 }
+/* thankyou */
+.thankyou-heading{
+    color:whitesmoke;
+    margin-bottom: 0;
+    padding-bottom: 1%;
+}
 /* navbar */
 .nav-confluid{
   padding: 0;

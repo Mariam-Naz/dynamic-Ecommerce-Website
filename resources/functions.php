@@ -166,7 +166,6 @@ function showSliderInFront(){
 function displayOrders(){
     $query = query("SELECT * FROM orders");
     confirm($query);
-
     while($row = mysqli_fetch_array($query)){
         $orders = <<<DELIMETER
         <tr>

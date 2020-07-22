@@ -12,7 +12,6 @@ if(isset($_GET['id'])){
   $product_category_id= escape($row['product_category_id']);
   $product_quantity = escape($row['product_quantity']);
   $product_image = escape($row['product_image']);
-
   }
 
 }
