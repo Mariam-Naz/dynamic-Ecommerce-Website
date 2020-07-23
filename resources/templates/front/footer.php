@@ -129,6 +129,11 @@
       <i class="fab fa-linkedin-in"> </i>
     </a>
   </li>
+  <li class="list-inline-item">
+    <a class="btn-floating btn-li mx-1">
+      <i class="fab fa-whatsapp"> </i>
+    </a>
+  </li>
 </ul>
 <!-- Social buttons -->
 
