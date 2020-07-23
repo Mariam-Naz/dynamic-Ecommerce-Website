@@ -13,7 +13,7 @@
     <div class="col-lg-4 mx-auto">
 
       <!-- Content -->
-      <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style='margin-top:50px; font-size:1.8rem;'>Footer Content</h5>
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style='margin-top:50px; font-size:1.8rem;'>About US</h5>
       <p style = 'font-size:13px;'>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
         consectetur
         adipisicing elit.</p>
@@ -27,17 +27,17 @@
     <div class="col-md-2 mx-auto">
 
       <!-- Links -->
-      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Top products categories</h5>
 
       <ul class="list-unstyled">
         <li>
-          <a href="#!">Link 1</a>
+          Laptops
         </li>
         <li>
-          <a href="#!">Link 2</a>
+          Mobiles
         </li>
         <li>
-          <a href="#!">Link 3</a>
+          Computers
         </li>
       </ul>
 
@@ -50,17 +50,17 @@
     <div class="col-md-2 mx-auto">
 
       <!-- Links -->
-      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">find us</h5>
 
       <ul class="list-unstyled">
         <li>
-          <a href="#!">Link 1</a>
+          <a href="mailto:mariamnaz212@gmail.com">mariamnaz212@gmail.com</a>
         </li>
         <li>
-          <a href="#!">Link 2</a>
+          <a href="mailto:mariamnaz212@gmail.com">msmunami63@gmail.com</a>
         </li>
         <li>
-          <a href="#!">Link 3</a>
+         0334-0289059
         </li>
       </ul>
 
@@ -73,17 +73,17 @@
     <div class="col-md-2 mx-auto">
 
       <!-- Links -->
-      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Pages</h5>
 
       <ul class="list-unstyled">
         <li>
-          <a href="#!">Link 1</a>
+          Contact
         </li>
         <li>
-          <a href="#!">Link 2</a>
+          Checkout
         </li>
         <li>
-          <a href="#!">Link 3</a>
+          Account
         </li>
       </ul>
 

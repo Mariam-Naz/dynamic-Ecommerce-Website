@@ -69,11 +69,18 @@ i{
     margin-top: 3%;
 }
 /* thankyou */
+.order{
+    font-weight: 300;
+    font-size: 20px;
+    color:rgb(66, 66, 66)
+}
 .thankyou-heading{
     color:whitesmoke;
     margin-bottom: 0;
     padding-bottom: 1%;
+    background-color: rgb(74, 121, 250);
 }
+
 /* navbar */
 .nav-confluid{
   padding: 0;
@@ -567,4 +574,10 @@ header{
 .link a {
   color: #000;
   font-size: 25px; 
+}
+
+/* footer */
+.list-unstyled >li >a:hover{
+    text-decoration: none;
+    color: ;
 }
