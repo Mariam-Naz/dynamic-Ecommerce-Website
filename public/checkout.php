@@ -4,6 +4,10 @@
 
 <!-- Header-->
 <?php include(TEMPLATE_FRONT .  "/header.php");?>
+<?php
+if(!isset($_SESSION['reg_user'])){
+    redirect("registeration.php");
+} ?>
 
     <!-- Page Content -->
     <div class="container">

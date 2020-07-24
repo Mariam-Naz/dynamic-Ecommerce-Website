@@ -120,6 +120,51 @@ function login_user(){
         }
     }
 }
+//*******************************************for registered clients*****************************************
+function reg_login(){
+    if(isset($_POST['login'])){
+        $username = $_POST['reg_login_username'];
+        $password = $_POST['reg_login_password'];
+        $query = query("SELECT * FROM registration WHERE username = '{$username}' AND password = '{$password}'");
+        confirm($query);
+        if(mysqli_num_rows($query) == 0){
+            set_message("Invalid Username Or Password");
+            redirect('registration.php');
+        }
+        else{
+            set_message("Welcome {$username}");
+            $_SESSION['reg_user'] = $username;
+            redirect('index.php');
+        }
+    }
+}
+
+function reg_register(){
+    if(isset($_POST['signup'])){
+        $username = $_POST['reg_username'];
+        $password = $_POST['reg_password'];
+        $email = $_POST['reg_email'];
+        $phone = $_POST['reg_phone'];
+        $address = $_POST['reg_address'];
+        $query = query("SELECT * FROM registration WHERE username = '{$username}'");
+        confirm($query);
+        $query2 = query("SELECT * FROM registration WHERE email = '{$email}'");
+        confirm($query2);
+        if(mysqli_num_rows($query) == 1){
+            set_message("Username already Taken!!");
+            redirect('registeration.php');
+        }
+        if(mysqli_num_rows($query2) == 1){
+            set_message("Email already exists");
+            redirect('registeration.php');
+        } else if(mysqli_num_rows($query) == 0 && mysqli_num_rows($query2) == 0) {
+            $query3 = query("INSERT INTO registration(username, password, email, phone, address) VALUES('{$username}' , '{$password}' , '{$email}' , '{$phone}' , '{$address}')" );
+            confirm($query3);
+            set_message("Registered Successfully!!");
+            redirect('index.php');
+        }
+    }
+}
 
 function send_message(){
     if(isset($_POST['submit'])){
