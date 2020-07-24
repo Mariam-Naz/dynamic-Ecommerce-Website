@@ -575,9 +575,3 @@ header{
   color: #000;
   font-size: 25px; 
 }
-
-/* footer */
-.list-unstyled >li >a:hover{
-    text-decoration: none;
-    color: ;
-}
