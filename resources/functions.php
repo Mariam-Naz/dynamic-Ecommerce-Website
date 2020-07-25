@@ -125,17 +125,17 @@ function login_user(){
 function reg_login(){
     if(isset($_POST['login'])){
         $username = $_POST['reg_login_username'];
-        $password = $_POST['reg_login_password'];
+        $password = md5($_POST['reg_login_password']);
         $query = query("SELECT * FROM registration WHERE username = '{$username}' AND password = '{$password}'");
         confirm($query);
         if(mysqli_num_rows($query) == 0){
             set_message("Invalid Username Or Password");
-            redirect('registration.php');
+            redirect('registeration.php');
         }
         else{
             set_message("Welcome {$username}");
             $_SESSION['reg_user'] = $username;
-            redirect('index.php');
+            redirect('checkout.php');
         }
     }
 }
@@ -143,7 +143,7 @@ function reg_login(){
 function reg_register(){
     if(isset($_POST['signup'])){
         $username = $_POST['reg_username'];
-        $password = $_POST['reg_password'];
+        $password = md5($_POST['reg_password']);
         $email = $_POST['reg_email'];
         $phone = $_POST['reg_phone'];
         $address = $_POST['reg_address'];
@@ -164,6 +164,17 @@ function reg_register(){
             set_message("Registered Successfully!!");
             redirect('index.php');
         }
+    }
+}
+function reg_logout(){
+    if(isset($_POST['reg_logout'])){
+        session_start();
+        session_unset();
+        session_destroy();
+        session_write_close();
+        setcookie(session_name(),'',0,'/');
+        session_regenerate_id(true);
+        redirect('index.php');
     }
 }
 
