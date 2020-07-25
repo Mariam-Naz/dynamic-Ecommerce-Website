@@ -398,6 +398,7 @@ function showSlider(){
             <td>{$row['slider_id']}</td>
             <td>{$row['slider_title']}</td>
             <td><img style='width:400px; height: 200px'  src=../../resources/slider-imgs/{$row['slider_image']} alt={$row['slider_title']} ></td>
+            <td><a class='btn btn-danger' href="../../resources/templates/back/delete_slider.php?id={$row['slider_id']}"><span class = 'glyphicon glyphicon-remove'></span></a></td>
         </tr>
         DELIMETER;
         echo $slide;
