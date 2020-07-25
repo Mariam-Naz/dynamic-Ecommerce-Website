@@ -14,7 +14,7 @@ if(!isset($_SESSION['username'])){
                
                 <!-- /.row -->
                 <?php 
-                    if($_SERVER['REQUEST_URI'] == "/dynamic-Ecommerce-Website/public/admin/"|| $_SERVER['REQUEST_URI']=="/dynamic-Ecommerce-Website/public/admin/index.php"){
+                    if($_SERVER['REQUEST_URI'] == "/ecommerce/public/admin/"|| $_SERVER['REQUEST_URI']=="/ecommerce/public/admin/index.php"){
                         include(TEMPLATE_BACK . "/admin_content.php");
                     }               
                     if(isset($_GET['orders'])){
@@ -34,6 +34,9 @@ if(!isset($_SESSION['username'])){
                     }
                     if(isset($_GET['slider'])){
                         include(TEMPLATE_BACK . "/slider.php");
+                    }
+                    if(isset($_GET['users'])){
+                        include(TEMPLATE_BACK . "/users.php");
                     }
                 ?>
 

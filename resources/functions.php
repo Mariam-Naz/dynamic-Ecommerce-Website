@@ -238,6 +238,24 @@ function displayOrders(){
     }
    
 }
+function displayRegUsers(){
+    $query = query("SELECT * FROM registration");
+    confirm($query);
+    while($row = mysqli_fetch_array($query)){
+        $reg_users = <<<DELIMETER
+        <tr>
+        <td>{$row['reg_no']}</td>
+        <td>{$row['username']}</td>
+        <td>{$row['email']}</td>
+        <td>{$row['phone']}</td>
+        <td>{$row['address']}</td>
+        <td><a class='btn btn-danger' href="../../resources/templates/back/delete_user.php?id={$row['reg_no']}"><span class = 'glyphicon glyphicon-remove'></span></a></td>
+        </tr>
+        DELIMETER;
+        echo $reg_users;
+    }
+   
+}
 
 function displayProducts(){
 
