@@ -174,7 +174,7 @@ function reg_logout(){
         session_write_close();
         setcookie(session_name(),'',0,'/');
         session_regenerate_id(true);
-        redirect('index.php');
+        redirect('../public/index.php');
     }
 }
 

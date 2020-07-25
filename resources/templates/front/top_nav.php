@@ -33,9 +33,16 @@
                 </div>
 
                 <form class="log-sign" style="--i: 1.8s" method="POST">
-                <?php reg_logout(); ?>
-                    <a href="registeration.php" class="btn transparent btn-nav">Login/Signup</a>
-                    <button name="reg_logout" class="btn solid btn-nav">Logout</button>
+                <?php reg_logout();
+                        if(!isset($_SESSION['reg_user'])){
+                   echo'<a href="registeration.php" class="btn transparent btn-nav">Login</a>';
+                   echo '<button name="reg_logout" class="btn solid btn-nav">Signup</button>';
+                        }else{?>
+                            <a href="#" class="btn transparent btn-nav"><?php echo $_SESSION['reg_user'] ?></a>
+                            <button name="reg_logout" class="btn solid btn-nav">Logout</button>
+                      <?php  }
+                    ?>
+
                 </form>
             </div>
 
