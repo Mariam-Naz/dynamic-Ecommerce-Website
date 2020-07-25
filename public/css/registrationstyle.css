@@ -3,9 +3,14 @@ body {
     margin: 0;
     color: #6a6f8c;
     background: #c8c8c8;
-    font: 600 16px/18px 'Open Sans', sans-serif
+    font: 600 16px/18px 'Open Sans', sans-serif;
+    overflow: hidden;
+    background-image: url("https://images.unsplash.com/photo-1564567912925-7432329e3eea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=60");
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.reg-cont{
+
+/* .reg-cont{
     margin-left: 30%;
 }
 .login-box {
@@ -15,14 +20,14 @@ body {
     position: relative;
     background: url(https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80) no-repeat center;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
-}
+} */
 
 .login-snip {
     width: 100%;
     height: 100%;
     position: absolute;
-    padding: 90px 70px 50px 70px;
-    background: rgba(0, 77, 77, .9)
+    padding: 40px 25% 50px 25%;
+    background: rgba(0, 0, 0, 0.9)
 }
 
 .login-snip .login,
@@ -185,8 +190,6 @@ a {
 }
 
 .hr {
-    height: 2px;
-    margin: 60px 0 50px 0;
     background: rgba(255, 255, 255, .2)
 }
 

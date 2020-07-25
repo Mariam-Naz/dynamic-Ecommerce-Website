@@ -24,10 +24,10 @@
 <div class="container-fluid reg-cont">
     <div class="col-md-12">
         <div class="card">
-        <h4 class="text-center bg-warning" style="color:red"><?php display_message(); ?></h4>
             <div class="login-box">
                 <div class="login-snip"> <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
                     <div class="login-space">
+                    <h4 class="text-center bg-warning" style="color:red"><?php display_message(); ?></h4>
                         <form class="login" method="POST">
                             <?php reg_login(); ?>
                             <div class="group"> <label for="user" class="label">Username</label> <input name="reg_login_username" id="user" type="text" class="input" placeholder="Enter your username"> </div>
