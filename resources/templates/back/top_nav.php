@@ -19,7 +19,7 @@
             <li>
                 <form style="text-align: center;" method="POST">
                     <?php reg_logout(); ?>
-                <button style="display: inline-block;" type="button" name="reg_logout" class="btn btn-info"><i class="fa fa-fw fa-power-off"></i> Log Out</button>
+                <button style="display: inline-block;" name="reg_logout" class="btn btn-info"><i class="fa fa-fw fa-power-off"></i> Log Out</button>
                 </form>
             </li>
         </ul>
