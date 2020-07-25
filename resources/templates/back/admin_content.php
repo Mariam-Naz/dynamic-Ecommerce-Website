@@ -22,12 +22,12 @@
                                         <i class="fa fa-shopping-cart fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">124</div>
+                                        <?php order_count(); ?>
                                         <div>New Orders!</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="index.php?orders">
                                 <div class="panel-footer">
                                     <span class="pull-left">View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -46,12 +46,12 @@
                                         <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">13</div>
+                                        <?php product_count(); ?>
                                         <div>Products!</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="index.php?products">
                                 <div class="panel-footer">
                                     <span class="pull-left">View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -69,12 +69,12 @@
                                         <i class="fa fa-tasks fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
+                                        <?php category_count(); ?>
                                         <div>Categories!</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="index.php?categories">
                                 <div class="panel-footer">
                                     <span class="pull-left">View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

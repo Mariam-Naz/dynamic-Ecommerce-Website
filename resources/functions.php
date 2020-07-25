@@ -403,6 +403,35 @@ function showSlider(){
         echo $slide;
     }
 }
-
+function order_count(){
+    $query = query("SELECT COUNT(*) as count FROM orders");
+    confirm($query);
+    while($row = mysqli_fetch_array($query)){
+    $orders = <<< DELIMETER
+    <div class="huge">{$row['count']}</div>
+    DELIMETER;
+    echo $orders;
+    }
+}
+function product_count(){
+    $query = query("SELECT COUNT(*) as count FROM products");
+    confirm($query);
+    while($row = mysqli_fetch_array($query)){
+    $products = <<< DELIMETER
+    <div class="huge">{$row['count']}</div>
+    DELIMETER;
+    echo $products;
+    }
+}
+function category_count(){
+    $query = query("SELECT COUNT(*) as count FROM categories");
+    confirm($query);
+    while($row = mysqli_fetch_array($query)){
+    $category = <<< DELIMETER
+    <div class="huge">{$row['count']}</div>
+    DELIMETER;
+    echo $category;
+    }
+}
 
 ?>
