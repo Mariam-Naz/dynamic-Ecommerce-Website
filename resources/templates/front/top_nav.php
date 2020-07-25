@@ -32,10 +32,11 @@
                     </ul>
                 </div>
 
-                <div class="log-sign" style="--i: 1.8s">
-                    <a href="registeration.php" class="btn transparent btn-nav">Log in</a>
-                    <a href="registeration.php" class="btn solid btn-nav">Sign up</a>
-                </div>
+                <form class="log-sign" style="--i: 1.8s" method="POST">
+                <?php reg_logout(); ?>
+                    <a href="registeration.php" class="btn transparent btn-nav">Login/Signup</a>
+                    <button name="reg_logout" class="btn solid btn-nav">Logout</button>
+                </form>
             </div>
 
             <div class="hamburger-menu-container">
