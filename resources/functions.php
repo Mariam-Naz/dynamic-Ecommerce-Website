@@ -208,7 +208,7 @@ function showSliderInFront(){
           </div>";
         }
         
-        $slider_sql = query("SELECT * FROM slider limit 1,3");
+        $slider_sql = query("SELECT * FROM slider limit 1,4");
         confirm($slider_sql);
         while($slider_row=mysqli_fetch_array($slider_sql)){
           echo "<div class='item' data-wrap='true' data-interval='1000'>
