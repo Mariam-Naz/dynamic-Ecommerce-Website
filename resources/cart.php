@@ -117,7 +117,7 @@ function orders(){
             $sub = $row['product_price'] * $value;
             $item_quantity += $value; 
            
-            $insert_orders = query("INSERT INTO orders(product_id, product_price, product_title, product_quantity , product_img) VALUES('{$id}' , '{$product_price}' , '{$product_title}' , '{$value}' , '{$product_img}' )");
+            $insert_orders = query("INSERT INTO orders(product_id, username, product_price, product_title, product_quantity , product_img) VALUES('{$id}', '{$_SESSION['reg_user']}' , '{$product_price}' , '{$product_title}' , '{$value}' , '{$product_img}' )");
         }
         $total += $sub;
         echo "quantity: " . $item_quantity;

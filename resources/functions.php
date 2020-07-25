@@ -227,6 +227,7 @@ function displayOrders(){
         $orders = <<<DELIMETER
         <tr>
         <td>{$row['order_id']}</td>
+        <td>{$row['username']}</td>
         <td>{$row['product_title']}</td>
         <td> <img style="height:62px; width:62px;" src=../../resources/uploads/{$row['product_img']} alt="img"></td>
         <td>{$row['product_quantity']}</td>

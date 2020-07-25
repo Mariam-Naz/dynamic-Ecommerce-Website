@@ -14,17 +14,18 @@
 
       <tr>
            <th>S.N</th>
+           <th>User</th>
            <th>Title</th>
            <th>Photo</th>
            <th>Quantity</th>
            <th>Amount</th>
+           <!-- <th>Address</th> -->
           
       </tr>
     </thead>
     <tbody>
         
             <?php displayOrders();?>
-        
 
     </tbody>
 </table>
