@@ -38,11 +38,11 @@
                         </form>
                         <form class="sign-up-form" method="POST">
                             <?php reg_register(); ?>
-                            <div class="group"> <label for="user" class="label">Username</label> <input name="reg_username" id="user" type="text" class="input" placeholder="Create your Username"> </div>
-                            <div class="group"> <label for="pass" class="label">Password</label> <input name="reg_password" id="pass" type="password" class="input" data-type="password" placeholder="Create your password"> </div>
-                            <div class="group"> <label for="pass" class="label">Email Address</label> <input name="reg_email" id="pass" type="text" class="input" placeholder="Enter your email address"> </div>
-                            <div class="group"> <label for="pass" class="label">Mobile Number</label> <input name="reg_phone" id="pass" type="text" class="input" placeholder="Enter your mobile number"> </div>
-                            <div class="group"> <label for="pass" class="label">Home Address</label> <input name="reg_address" id="pass" type="text" class="input" placeholder="Enter your home address"> </div>
+                            <div class="group"> <label for="user" class="label">Username</label> <input name="reg_username" id="user" type="text" class="input" placeholder="Create your Username" require> </div>
+                            <div class="group"> <label for="pass" class="label">Password</label> <input name="reg_password" id="pass" type="password" class="input" data-type="password" placeholder="Create your password" require> </div>
+                            <div class="group"> <label for="pass" class="label">Email Address</label> <input name="reg_email" id="pass" type="text" class="input" placeholder="Enter your email address" require> </div>
+                            <div class="group"> <label for="pass" class="label">Mobile Number</label> <input name="reg_phone" id="pass" type="text" class="input" placeholder="Enter your mobile number" require> </div>
+                            <div class="group"> <label for="pass" class="label">Home Address</label> <input name="reg_address" id="pass" type="text" class="input" placeholder="Enter your home address" require> </div>
                             <div class="group"> <input type="submit" name="signup" class="button" value="Sign Up"> </div>
                             <div class="hr"></div>
                             <div class="foot"> <label for="tab-1">Already Member?</label> </div>
