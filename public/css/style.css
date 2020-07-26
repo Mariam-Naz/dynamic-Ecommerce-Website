@@ -4,7 +4,6 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color:rgb(241, 242, 243);
     overflow-x: hidden;
-    over
 }
 .img-size{
     width: 320px;
@@ -17,7 +16,7 @@ body{
     padding-bottom: 20px;
     margin-bottom: 6%;
 }
-.card:hover{
+.card-product:hover{
     transition:0.3s;
     box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.158);
    
@@ -42,7 +41,6 @@ body{
     background-color:#fff;
     text-align:center;
     font-family: sans-serif;
-    /* float: left; */
     padding-top: 12px;
     padding-bottom: 20px;
     margin-bottom: 6%;
