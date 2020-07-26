@@ -16,7 +16,7 @@ if(!isset($_SESSION['username'])){
                 <?php 
                     if($_SERVER['REQUEST_URI'] == "/ecommerce/public/admin/"|| $_SERVER['REQUEST_URI']=="/ecommerce/public/admin/index.php"){
                         include(TEMPLATE_BACK . "/admin_content.php");
-                    }               
+                    }           
                     if(isset($_GET['orders'])){
                         include(TEMPLATE_BACK . "/orders.php");
                     }

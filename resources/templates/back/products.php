@@ -1,15 +1,12 @@
  
-            <div class="col-md-12">
+          <div class="col-md-12">
 
              <div class="row">
 
 <h1 class="page-header">
    All Products
-
 </h1>
 <table class="table table-hover">
-
-
     <thead>
 
       <tr>
@@ -26,21 +23,6 @@
 </table>
 </div>
 <?php include(TEMPLATE_BACK . "/footer.php"); ?>
-
-
-
-
-
-
-
-
-
-
-
-                
-                 
-
-
              </div>
 
             </div>

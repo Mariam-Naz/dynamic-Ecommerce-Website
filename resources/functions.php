@@ -203,7 +203,7 @@ function showSliderInFront(){
     $slider_sql = query("SELECT * FROM slider limit 1");
         confirm($slider_sql);
         while($slider_row=mysqli_fetch_array($slider_sql)){
-          echo "<div class='item active' data-wrap='true' data-interval='1000'>
+          echo "<div class='item active' data-wrap='true' data-interval='3000'>
           <img class= 'slide-image' style='width:1500px; height:450px;' src='../resources/slider-imgs/$slider_row[slider_image]' alt='$slider_row[slider_title]'>
           </div>";
         }
@@ -211,7 +211,7 @@ function showSliderInFront(){
         $slider_sql = query("SELECT * FROM slider limit 1,4");
         confirm($slider_sql);
         while($slider_row=mysqli_fetch_array($slider_sql)){
-          echo "<div class='item' data-wrap='true' data-interval='1000'>
+          echo "<div class='item' data-wrap='true' data-interval='3000'>
           <img class= 'slide-image' style='width:1500px; height:450px;' src='../resources/slider-imgs/$slider_row[slider_image]'  alt='$slider_row[slider_title]'>
           </div>";
         }
