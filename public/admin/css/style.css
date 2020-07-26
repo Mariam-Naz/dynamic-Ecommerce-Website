@@ -2,8 +2,9 @@
   background-color: #F1F1F1 !important;
 }
 
-
-
+button{
+  outline: none;
+}
 .product_image {
 
 width: 200px !important;

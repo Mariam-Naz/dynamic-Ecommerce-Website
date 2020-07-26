@@ -3,6 +3,8 @@
 body{
     font-family: 'Roboto', sans-serif;
     background-color:rgb(241, 242, 243);
+    overflow-x: hidden;
+    over
 }
 .img-size{
     width: 320px;
@@ -20,7 +22,8 @@ body{
     box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.158);
    
 }
-.btn {
+.btn{
+    outline: none;
     display: inline-block;
     padding: 1rem 1.8rem;
     font-size: 1rem;
