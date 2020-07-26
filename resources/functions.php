@@ -161,6 +161,7 @@ function reg_register(){
         } else if(mysqli_num_rows($query) == 0 && mysqli_num_rows($query2) == 0) {
             $query3 = query("INSERT INTO registration(username, password, email, phone, address) VALUES('{$username}' , '{$password}' , '{$email}' , '{$phone}' , '{$address}')" );
             confirm($query3);
+            $_SESSION['reg_user'] = $username;
             set_message("Registered Successfully!!");
             redirect('index.php');
         }

@@ -36,7 +36,7 @@
                 <?php reg_logout();
                         if(!isset($_SESSION['reg_user'])){
                    echo'<a href="registeration.php" class="btn transparent btn-nav">Login</a>';
-                   echo '<button name="reg_logout" class="btn solid btn-nav">Signup</button>';
+                   echo '<a href="registeration.php" <button name="reg_logout" class="btn solid btn-nav">Signup</button> </a>';
                         }else{?>
                             <a href="#" class="btn transparent btn-nav"><?php echo $_SESSION['reg_user'] ?></a>
                             <button name="reg_logout" class="btn solid btn-nav">Logout</button>
