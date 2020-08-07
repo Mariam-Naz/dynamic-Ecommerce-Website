@@ -77,8 +77,8 @@ include('navbar.php');
                 <!--End form-group-->
                         <div class="form-group">
                                   <label for="gender">Gender</label><br>
-                                          Male<input type="radio" name="gender" id="gender" value="Male" style="margin-left:10px; margin-right:10px;" checked>
-                                          Female<input type="radio" name="gender" id="gender" value="Female" style="margin-left:10px;">
+                                  <input type="radio" name="gender" id="gender" value="Male" style="margin-left:10px; margin-right:10px;" checked> Male
+                                  <input type="radio" name="gender" id="gender" value="Female" style="margin-left:10px;">    Female
                                           <?php if(isset($gendererror)) echo $gendererror;
                         ?>
                         </div><!--gender-->

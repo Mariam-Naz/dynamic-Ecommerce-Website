@@ -1,5 +1,4 @@
 
-            
      <header>
         <div class="container-fluid nav-confluid">
             <input type="checkbox" name="" id="check">
@@ -24,6 +23,10 @@
                         </li>
                         <li class="nav-link" style="--i: 1.1s">
                             <a href="checkout.php">CHECKOUT</a>
+                            
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="./bd/index.php">BLOOD_DONATE</a>
                             
                         </li>
                         <li class="nav-link" style="--i: 1.35s">
