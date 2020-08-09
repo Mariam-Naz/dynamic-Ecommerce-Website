@@ -35,7 +35,7 @@ include('navbar.php')
     if((isset($_GET['city']) && !empty($_GET['city'])) &&(isset($_GET['blood_group']) && !empty($_GET['blood_group'])) ){
         $c=$_GET['city'];
         $g=$_GET['blood_group'];
-        $sql="SELECT * from donar Where city='$c' AND blood_group='$g'";
+        $sql="SELECT * from donar Where city='$c' AND (blood_group='$g' OR blood_group='O-')";
         $result=mysqli_query($connection,$sql);
         if(mysqli_num_rows($result)>0){
             while($row=mysqli_fetch_assoc($result)){
