@@ -1,4 +1,3 @@
-<?php include('../../resources/functions.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,18 +38,7 @@
                         </li>
                     </ul>
                 </div>
-                <form class="log-sign" style="--i: 1.8s" method="POST">
-                <?php reg_logout();
-                        if(!isset($_SESSION['reg_user'])){
-                   echo'<a href="registeration.php" class="btn transparent btn-nav">Login</a>';
-                   echo '<a href="registeration.php" class="btn solid btn-nav">Signup</a>';
-                        }else{?>
-                            <a href="#" class="btn transparent btn-nav"><?php echo $_SESSION['reg_user'] ?></a>
-                            <button name="reg_logout" class="btn solid btn-nav">Logout</button>
-                      <?php  }
-                    ?>
-
-                </form>
+                
             </div>
 
             <div class="hamburger-menu-container">

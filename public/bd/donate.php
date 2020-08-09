@@ -26,9 +26,9 @@ include('navbar.php');
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h3 class="card-title" style="color: white; text-align: center; text-transform: capitalize; font-family: 'Merriweather',serif;">Donate the Blood</h3>
+              <h3 class="card-title" style="color: white; text-align: center; text-transform: capitalize;">Donate the Blood</h3>
               <br>
-              <p class="card-text" style="color: white; text-align: justify; font-size: 20px; font-family: 'Merriweather',serif;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+              <p class="card-text" style="color: white; text-align: justify; font-size: 20px; font-weight:400;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
                   this is the platforn where you can donate the blood for the woh need it. Serve the suffering ones by giving them 
                   blood 
               </p>
@@ -42,7 +42,7 @@ include('navbar.php');
            <div class="row">
             <div class="col-md-6 offset-md-3 form-container">
         
-                        <h3>Become a Donor!!!</h3>
+                        <h3 style="color: white">Become a Donor!!!</h3>
                         <hr class=red-bar>
                         <?php if(isset($termerror)) echo $termerror;
                         if(isset($submit)) echo $submit;

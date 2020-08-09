@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 body{
     padding: 0%;
     margin: 0;
     overflow-x: hidden;
-    font-family: 'Merriweather',serif;
+    font-family: 'Roboto' , sans-serif;
     
 }
 img{
@@ -10,15 +11,13 @@ img{
     height: 70vh;
 }
 
-h3, .card-title{
-    color: rgb(180, 5, 5);
+.red, .card-title{
+    color: rgb(250, 68, 68);
     text-align: center;
     margin-top: 10%;
     text-transform: uppercase;
 }
 .text-center{
-    color:rgb(180,5,5);
     text-transform: uppercase;
-    font-family: 'Roboto',sans-serif;
     text-align: center;
 }

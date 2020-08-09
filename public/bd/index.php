@@ -1,4 +1,5 @@
 <?php
+require_once('../../resources/config.php');
 include("navbar.php");
 ?>
 <!DOCTYPE html>
@@ -41,8 +42,6 @@ include("navbar.php");
             <div class="card bg-light text-white" >
                 <img src="blood-donor.jpg" class="card-img" alt="...">
                 <div class="card-img-overlay">
-                  <h3 class="card-title">Donate Blood</h3>
-                  <h3 class="sub-title">Save Lives</h3>
                 </div>
               </div>
         </div>
@@ -51,7 +50,7 @@ include("navbar.php");
     <!-- donate section -->
     <div class="row">
       <div class="col-md-12 col-sm-12">
-        <h2 class="text-center" >Search for donar</h2>
+        <h2 class="red" class="text-center" >Search for donar</h2>
         <hr class="red-bar" style="background-color: rgb(180,5,5); width: 45%; height: 3px;">
       </div>
     </div>
@@ -96,7 +95,7 @@ include("navbar.php");
               </div>
               
 							<div class="form-group center-aligned">
-								<button type="submit" class="btn btn-lg btn-default" id="search" ><i class="fa fa-search" aria-hidden="true"></i></button>
+								<button type="submit" class=" btn btn-nav transparent" id="search" ><i class="fa fa-search" aria-hidden="true"></i></button>
 							</div>
               </form>
         
@@ -105,8 +104,8 @@ include("navbar.php");
 <br><br><br><br><br>
 			<div class="container-fluid red-background" id="about">
 				<div class="row" >
-					<div class="col-md-12" style="background-image: linear-gradient(315deg, #eb6a6a 10%, #ca1028 74%);">
-						<h2 class="text-center"  style="color: white; font-weight: 500;padding: 10px 0 0 0; font-family: 'Merriweather',serif
+					<div class="col-md-12" style="background-color:#dc3545;">
+						<h2 class="text-center"  style="color: white; font-weight: 500;padding: 10px 0 0 0;"
                         ;">LIFE SAVER</h2>
 						<hr class="white-bar" style="background-color: white; width:50%">
 						<p  style="color: white; font-size: 20px; text-align: justify; font-family: 'Roboto',sans-serif;"> 
@@ -130,8 +129,8 @@ include("navbar.php");
                     <img src="blood-donation.png" style="width: 50%; height: 50%; margin-left: 5%; ">
                     </div>
                     <div class="col-md-6 col-sm-12" style="text-align: justify; font-family: 'Roboto',sans-serif; " >
-                        <h3 style="font-family: 'Merriweather',serif;">Donate Blood</h3>
-                        <p style="margin-right: 5%; font-size:1.2rem; color: white;  background-image:linear-gradient(315deg, #eb6a6a 10%, #ca1028 74%); padding: 5%;">
+                        <h3 class="red">Donate Blood</h3>
+                        <p style="margin-right: 5%; font-size:1.2rem; color: white;   background-color:#dc3545; padding: 5%;">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
             took a galley of type and 
@@ -143,8 +142,8 @@ include("navbar.php");
             <br><br><br>
             <div class="row">
                     <div class="col-md-6 col-sm-12" style="text-align: justify; " >
-                        <h3 style="font-family: 'Merriweather',serif;">Get Blood</h3>
-                        <p style="margin-left: 5%; font-size:1.2rem; font-family: 'Roboto',sans-serif; color: white; background-image: linear-gradient(315deg, #eb6a6a 10%, #ca1028 74%); padding: 5%;" > 
+                        <h3 class="red">Get Blood</h3>
+                        <p style="margin-left: 5%; font-size:1.2rem; font-family: 'Roboto',sans-serif; color: white;  background-color:  #dc3545; padding: 5%;" > 
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
               scrambled it to make a type specimen book. It has survived not only five centuries,
@@ -162,9 +161,7 @@ include("navbar.php");
             <br><br><br><br>
            
                     </div>
-                    <footer style="color: rgb(180,5,5); background-color: silver;">
-                        <center>Copyright &copy; 2020 lifesaver</center>
-                    </footer>
+                    <?php include(TEMPLATE_FRONT . DS . "footer.php") ?>
 </body>
 
 </html>

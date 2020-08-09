@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
-font-family: 'Roboto',sans-serif;
+	font-family: 'Roboto',sans-serif;
 }
 
 .size{
@@ -12,7 +12,7 @@ font-family: 'Roboto',sans-serif;
     
 }
 .form-container{
-    background-image:linear-gradient(315deg, #be0c0c 0%, #e71d35 74%);
+    background-color:  #dc3545;
     border: .5px solid #eee;
     border-radius: 5px;
     padding: 20px 10px 20px 30px;
@@ -26,7 +26,6 @@ color: white;
 }
 h1{
     color: white;
-    font-family: 'Roboto',sans-serif;
 }
 h3{
     color: #f7efef;
@@ -53,7 +52,7 @@ h3{
 		z-index: 1;
 	}
 	.loader .fa{
-		color: #e74c3c;
+		color:  #dc3545;
 		font-size: 52px !important;
 	}
 	.form-group{
@@ -63,7 +62,7 @@ h3{
 		color: white;
 	}
 	h3{
-		color: #e74c3c;
+		color:  #dc3545;
 		text-align: center;
 	}
 	.red-bar{
@@ -73,11 +72,12 @@ h3{
 		display: block;
 	}
 	.name{
-		color: #e74c3c;
+		color:  #dc3545;
 		font-size: 22px;
 		font-weight: 700;
 	}
 	.donors_data{
+
 		float: left;
 		display: block;
 		background-color: white;
