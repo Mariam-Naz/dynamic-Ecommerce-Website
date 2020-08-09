@@ -34,7 +34,7 @@
          
                         </li>
                         <li class="nav-link" style="--i: 1.1s">
-                            <a href="about.php">ABOUT</a>
+                            <a href="../index.php">SHOP</a>
                             
                         </li>
                     </ul>
