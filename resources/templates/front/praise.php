@@ -16,7 +16,7 @@
             <i class="fas fa-thumbs-up"></i>
             <h3>100% Origial</h3>
             <div class = 'deco'></div>
-            <p>We just offer you the best and original products</p>
+            <p>We just offer you the best and original products ever</p>
     </div>
 </div>
 </div>

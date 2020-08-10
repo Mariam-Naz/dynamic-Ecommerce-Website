@@ -13,7 +13,7 @@
     <div class="col-lg-4 mx-auto">
 
       <!-- Content -->
-      <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style='margin-top:50px; font-size:1.8rem;'>About US</h5>
+      <h5 class="text-uppercase mt-3 mb-4" style='margin-top:50px;'>About US</h5>
       <p style = 'font-size:13px;'>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
         consectetur
         adipisicing elit.</p>
@@ -27,7 +27,7 @@
     <div class="col-md-2 mx-auto">
 
       <!-- Links -->
-      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Top products categories</h5>
+      <h5 class="text-uppercase mt-3 mb-4">Top products categories</h5>
 
       <ul class="list-unstyled">
         <li>

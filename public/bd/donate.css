@@ -5,7 +5,6 @@ body{
     box-sizing: border-box;
 	font-family: 'Roboto',sans-serif;
 }
-
 .size{
     min-height: 0px;
     padding: 60px 0 40px 0;
@@ -24,13 +23,7 @@ color: white;
 .form-group{
     text-align: left;
 }
-h1{
-    color: white;
-}
-h3{
-    color: #f7efef;
-    text-align: center;
-}
+
 .red-bar{
     width: 25%;
     background-color: #eee;
@@ -57,13 +50,6 @@ h3{
 	}
 	.form-group{
 		text-align: left;
-	}
-	h1{
-		color: white;
-	}
-	h3{
-		color:  #dc3545;
-		text-align: center;
 	}
 	.red-bar{
 		width: 25%;
