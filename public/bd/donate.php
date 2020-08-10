@@ -160,7 +160,7 @@ include('navbar.php');
                 </div><!--End form-group-->
                 
                         <div class="form-group">
-                            <button id="submit" name="submit" type="submit" class="btn btn-lg btn-danger center-aligned" style="margin-top: 20px;">Submit</button>
+                            <button id="submit" name="submit" type="submit" class="btn btn-lg btn-warning center-aligned" style="margin-top: 20px;">Submit</button>
                         </div>
                     </form>
                 </div>
