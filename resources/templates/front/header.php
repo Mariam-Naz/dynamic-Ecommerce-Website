@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="keywords" content="PC computers, mobiles, tablets, smart TVs, laptops">
+    <meta name="description" content="Best place for tech products with free delivery all over Pakistan">
 
     <title>Technofy</title>
 
