@@ -26,7 +26,6 @@ include("navbar.php");
                 <h4 class='donate-h4'>Save Life </h4>
         </div>
     </div>
-    <br><br><br> 
     <!-- donate section -->
     <div class="row">
       <div class="col-md-12 col-sm-12">

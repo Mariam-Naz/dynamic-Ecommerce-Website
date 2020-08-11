@@ -34,17 +34,19 @@ body{
 .bg-image{
     background-image: url("blood-donor.jpg");
     background-size: cover;
+    mar
 }
 .donate-h1 h1{
-    font-size: 5rem;
-    padding:15% 25% 0% 32%;
+    text-align: center;
+    font-size: 4.5rem;
+    padding-top:15%;
     margin-bottom: 0%;
     color: rgb(155, 2, 2);
 }
 .donate-h1 h4{
+    text-align: center;
     font-size: 3rem;
     margin-top: 0%;
-    padding:0% 10% 2% 33%;
     color: rgb(223, 222, 222);
     padding-bottom: 20%;
 }
