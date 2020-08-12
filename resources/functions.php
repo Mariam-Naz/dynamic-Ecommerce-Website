@@ -284,10 +284,10 @@ function displayProducts(){
 }
 
 function addProducts(){
-if(isset($_POST['publish'])){
-$product_title = ($_POST['product_title']);
-$product_introduction = ($_POST['product_introduction']);
-$product_description = ($_POST['product_description']);
+if(!empty($_POST['publish'])){
+$product_title = escape($_POST['product_title']);
+$product_introduction = escape($_POST['product_introduction']);
+$product_description = escape($_POST['product_description']);
 $product_price = escape($_POST['product_price']);
 $product_category_id= escape($_POST['product_category']);
 $product_quantity = escape($_POST['product_quantity']);
