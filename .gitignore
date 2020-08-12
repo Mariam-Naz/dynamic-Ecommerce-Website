@@ -1,3 +1,3 @@
-config.php
+resources/config.php
 
-connect.php
+public/bd/connect.php
