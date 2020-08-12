@@ -284,20 +284,19 @@ function displayProducts(){
 }
 
 function addProducts(){
-
-    if(isset($_POST['publish'])){
-        $product_title = escape($_POST['product_title']);
-        $product_introduction = escape($_POST['product_introduction']);
-        $product_description = escape($_POST['product_description']);
-        $product_price = escape($_POST['product_price']);
-        $product_category_id= escape($_POST['product_category']);
-        $product_quantity = escape($_POST['product_quantity']);
-        $product_image = escape($_FILES['file']['name']);
-        $product_image_location = escape($_FILES['file']['tmp_name']);
-        move_uploaded_file($product_image_location , UPLOAD_DIR . DS . $product_image);
-        $query = query("INSERT INTO products(product_title, product_category_id, product_price, product_quantity, product_long_description, product_description, product_image) VALUES('{$product_title}' , '{$product_category_id}' , '{$product_price}' , '{$product_quantity}' , '{$product_description}' , '{$product_introduction}' , '{$product_image}')" );
-        confirm($query);
-        redirect('index.php?products');
+if(isset($_POST['publish'])){
+$product_title = escape($_POST['product_title']);
+$product_introduction = escape($_POST['product_introduction']);
+$product_description = escape($_POST['product_description']);
+$product_price = escape($_POST['product_price']);
+$product_category_id= escape($_POST['product_category']);
+$product_quantity = escape($_POST['product_quantity']);
+$product_image = escape($_FILES['file']['name']);
+$product_image_location = escape($_FILES['file']['tmp_name']);
+move_uploaded_file($product_image_location , UPLOAD_DIR . DS . $product_image);
+$query = query("INSERT INTO products(product_title, product_category_id, product_price, product_quantity, product_long_description, product_description, product_image) VALUES('{$product_title}' , '{$product_category_id}' , '{$product_price}' , '{$product_quantity}' , '{$product_description}' , '{$product_introduction}' , '{$product_image}')" );
+confirm($query);
+redirect('index.php?products');
     }
 }
 
