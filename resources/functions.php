@@ -45,11 +45,11 @@ while($row = mysqli_fetch_array($query)){
     <div class="col-sm-12 col-lg-4 col-md-4">
     <div class="card-deck">
     <div class='card card-product'>
-    <a href='item.php?id={$row['product_id']}'><img  class="card-img-top" style="width: 100%; height: 170px;"  src=../resources/uploads/$row[product_image] alt="$row[product_title]"></a>
+    <a href='item.php?id={$row['product_id']}'><img  class="card-img-top" style="width: 100%; height: 170px;"  src=./resources/uploads/$row[product_image] alt="$row[product_title]"></a>
     <div class="card-body">
     <h4 class='card-title'><a href="item.php?id={$row['product_id']}">$row[product_title]</a></h4>
     <h4  class="card-text"><small class="text-muted">Rs. $row[product_price]</small></h4>
-    <a class="btn btn-primary" target="_blank" href="../resources/cart.php?add={$row['product_id']}">ADD TO CART</a>
+    <a class="btn btn-primary" target="_blank" href="./resources/cart.php?add={$row['product_id']}">ADD TO CART</a>
     </div>
     </div>
     </div>
@@ -65,7 +65,7 @@ function get_categories(){
     confirm($query);
     while($row = mysqli_fetch_array($query)){
         $categoryLinks = <<< DELIMETER
-    <li class="dropdown-link"><a href="category.php?id={$row['cat_id']}">$row[cat_title]</a></li>
+    <li class="dropdown-link"><a href="./public/category.php?id={$row['cat_id']}">$row[cat_title]</a></li>
 DELIMETER;
 echo $categoryLinks;
     }
@@ -175,7 +175,7 @@ function reg_logout(){
         session_write_close();
         setcookie(session_name(),'',0,'/');
         session_regenerate_id(true);
-        redirect('../public/index.php');
+        header("Location: http://".$_SERVER['HTTP_HOST'].'/ecommerce/public');
     }
 }
 
@@ -205,7 +205,7 @@ function showSliderInFront(){
         confirm($slider_sql);
         while($slider_row=mysqli_fetch_array($slider_sql)){
           echo "<div class='item active' data-wrap='true' data-interval='3000'>
-          <img class= 'slide-image' style='width:1500px; height:450px;' src='../resources/slider-imgs/$slider_row[slider_image]' alt='$slider_row[slider_title]'>
+          <img class= 'slide-image' style='width:1500px; height:450px;' src='./resources/slider-imgs/$slider_row[slider_image]' alt='$slider_row[slider_title]'>
           </div>";
         }
         

@@ -1,3 +1,3 @@
 <?php 
-reg_logout();
+redirect("./index.php")
 ?>

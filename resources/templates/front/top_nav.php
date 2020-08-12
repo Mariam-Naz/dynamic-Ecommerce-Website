@@ -11,7 +11,7 @@
                 <div class="nav-links">
                     <ul>
                         <li class="nav-link" style="--i: .6s">
-                            <a href="index.php">HOME</a>
+                            <a href="../index.php">HOME</a>
                         </li>
                         <li class="nav-link" style="--i: .85s">
                             <a href="#">CATEGORIES<i class="fas fa-caret-down"></i></a>
@@ -38,8 +38,8 @@
                 <form class="log-sign" style="--i: 1.8s" method="POST">
                 <?php reg_logout();
                         if(!isset($_SESSION['reg_user'])){
-                   echo'<a href="registeration.php" class="btn transparent btn-nav">Login</a>';
-                   echo '<a href="registeration.php" class="btn solid btn-nav">Signup</a>';
+                   echo'<a href="./registeration.php" class="btn transparent btn-nav">Login</a>';
+                   echo '<a href="./registeration.php" class="btn solid btn-nav">Signup</a>';
                         }else{?>
                             <a href="#" class="btn transparent btn-nav"><?php echo $_SESSION['reg_user'] ?></a>
                             <button name="reg_logout" class="btn solid btn-nav">Logout</button>
