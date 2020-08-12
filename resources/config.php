@@ -14,7 +14,7 @@ defined("UPLOAD_DIR") ? null : define("UPLOAD_DIR",__DIR__ . DS . "uploads");
 
 defined("SLIDER_DIR") ? null : define("SLIDER_DIR",__DIR__ . DS . "slider-imgs");
 
-defined("DB_HOST") ? null : define("DB_HOST","3.81.179.176"); 
+defined("DB_HOST") ? null : define("DB_HOST","localhost"); 
 
 defined("DB_USER") ? null : define("DB_USER", "root");
 
