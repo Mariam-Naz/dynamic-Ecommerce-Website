@@ -27,7 +27,7 @@ function query($sql){
 function confirm($result){
     global $connection;
     if(!$result){
-        die('Query failed' + mysqli_error($connection));
+        die(redirect("../public/404.html") + mysqli_error($connection));
     }
 }
 
