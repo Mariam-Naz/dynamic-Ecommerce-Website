@@ -7,16 +7,14 @@
 <div>
 
 
-    <form action="" method="post" enctype="multipart/form-data">
-    
-    <?php addSlider(); ?>
+    <form onsubmit="<?php addSlider(); ?>" action="" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="category-title">Title</label>
             <input type="text" name='slider_title' class="form-control">
         </div>
         <div class="form-group">
             <label for="slider-title">Slider Image</label>
-            <input type="file" name="file">
+            <input type="file" name="fileToUpload" id="fileToUpload">
         </div>
         <div class="form-group">
             <input type="submit" name='submit' class="btn btn-primary" value="Add Slider">

@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="index.php">Admin</a>
-    <a class="navbar-brand" href="../../index.php">Home</a>
+    <a class="navbar-brand" href="../../    index.php">Home</a>
 </div>
 <!-- Top Menu Items -->
 <ul class="nav navbar-right top-nav">
