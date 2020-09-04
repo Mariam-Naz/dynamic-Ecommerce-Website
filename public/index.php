@@ -1,3 +1,3 @@
 <?php
-header("Location: http://".$_SERVER['HTTP_HOST'].'/ecommerce');
+header("Location: http://".$_SERVER['HTTP_HOST'].'/');
 ?>
