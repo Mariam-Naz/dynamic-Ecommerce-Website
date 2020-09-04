@@ -284,20 +284,56 @@ function displayProducts(){
 }
 
 function addProducts(){
-    if(isset($_POST['publish'])){
+$target_dir = "../../resources/uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// Check if image file is a actual image or fake image
+if(isset($_POST["publish"])) {
     $product_title = escape($_POST['product_title']);
     $product_introduction = escape($_POST['product_introduction']);
     $product_description = escape($_POST['product_description']);
     $product_price = escape($_POST['product_price']);
     $product_category_id= escape($_POST['product_category']);
     $product_quantity = escape($_POST['product_quantity']);
-    $product_image = escape($_FILES['file']['name']);
-    $product_image_location = escape($_FILES['file']['tmp_name']);
-    move_uploaded_file($product_image_location , UPLOAD_DIR . DS . $product_image);
-    $query = query("INSERT INTO products(product_title, product_category_id, product_price, product_quantity, product_long_description, product_description, product_image) VALUES('.{$product_title}.' , '.{$product_category_id}.' , '.{$product_price}.' , '.{$product_quantity}.' , '.{$product_description}.' , '.{$product_introduction}.' , '.{$product_image}.')" );
+  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+  if($check !== false) {
+    echo "File is an image - " . $check["mime"] . ".";
+    $uploadOk = 1;
+  } else {
+    echo "File is not an image.";
+    $uploadOk = 0;
+  }
+}
+
+// Check if file already exists
+if (file_exists($target_file)) {
+  echo "Sorry, file already exists.";
+  $uploadOk = 0;
+}
+
+// Allow certain file formats
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  $uploadOk = 0;
+}
+
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+  echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+    echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+    $imgname = $_FILES["fileToUpload"]["name"];
+    $query = query("INSERT INTO products(product_title, product_category_id, product_price, product_quantity, product_long_description, product_description, product_image) VALUES('{$product_title}' , '{$product_category_id}' , '.{$product_price}.' , '{$product_quantity}' , '{$product_description}' , '{$product_introduction}' , '{$imgname}')");
     confirm($query);
-    redirect('index.php?products');
-        }
+    header("Location: ./");
+  } else {
+    echo "Sorry, there was an error uploading your file.";
+  }
+}
 }
 
 

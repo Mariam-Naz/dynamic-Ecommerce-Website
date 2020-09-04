@@ -5,8 +5,7 @@
 </h1>
 </div>
                
-<form action="" method="post" enctype="multipart/form-data">
-<?php addProducts(); ?>
+<form onsubmit="<?php addProducts(); ?>" action="" method="post" enctype="multipart/form-data">
 <div class="col-md-8">
 <div class="form-group">
     <label for="product-title">Product Title </label>
@@ -88,7 +87,7 @@
     <!-- Product Image -->
     <div class="form-group">
         <label for="product-title">Product Image</label>
-        <input type="file" name="file">
+        <input type="file" name="fileToUpload" id="fileToUpload">
       
     </div>
 
