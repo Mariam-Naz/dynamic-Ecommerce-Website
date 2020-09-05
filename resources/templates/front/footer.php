@@ -57,7 +57,7 @@
           <a href="mailto:mariamnaz212@gmail.com">mariamnaz212@gmail.com</a>
         </li>
         <li>
-          <a href="mailto:mariamnaz212@gmail.com">msmunami63@gmail.com</a>
+          <a href="mailto:msmunami63@gmail.com">msmunami63@gmail.com</a>
         </li>
         <li>
          0334-0289059
