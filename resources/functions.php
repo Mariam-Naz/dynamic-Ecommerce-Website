@@ -213,7 +213,7 @@ function showSliderInFront(){
         confirm($slider_sql);
         while($slider_row=mysqli_fetch_array($slider_sql)){
           echo "<div class='item' data-wrap='true' data-interval='3000'>
-          <img class= 'slide-image' style='width:1500px; height:450px;' src='../resources/slider-imgs/$slider_row[slider_image]'  alt='$slider_row[slider_title]'>
+          <img class= 'slide-image' style='width:1500px; height:450px;' src='./resources/slider-imgs/$slider_row[slider_image]'  alt='$slider_row[slider_title]'>
           </div>";
         }
 }
