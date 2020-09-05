@@ -56,7 +56,7 @@
  <!-- Product Quantity-->
 
  <div class="form-group">
- <label for="product-quantity">Product Qantity</label>
+ <label for="product-quantity">Product Quantity</label>
         <input type="number" name="product_quantity" class="form-control">
 </div>
 

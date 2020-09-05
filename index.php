@@ -244,7 +244,7 @@ padding-right: 13%">
           <a href="mailto:msmunami63@gmail.com">msmunami63@gmail.com</a>
         </li>
         <li>
-         0334-0289059
+         <a href="https://wa.me/923340289059/?text=HI!%20Reached%20You%20Through%20Technofy">0334-0289059</a>
         </li>
       </ul>
 
@@ -294,12 +294,12 @@ padding-right: 13%">
 <!-- Social buttons -->
 <ul class="list-unstyled list-inline text-center">
   <li class="list-inline-item">
-    <a class="btn-floating btn-fb mx-1">
+    <a href="https://www.facebook.com/mariam.naz.5477" class="btn-floating btn-fb mx-1">
       <i class="fab fa-facebook-f"> </i>
     </a>
   </li>
   <li class="list-inline-item">
-    <a class="btn-floating btn-tw mx-1">
+    <a href="https://twitter.com/msmunami63" class="btn-floating btn-tw mx-1">
       <i class="fab fa-twitter"> </i>
     </a>
   </li>
@@ -314,7 +314,7 @@ padding-right: 13%">
     </a>
   </li>
   <li class="list-inline-item">
-    <a class="btn-floating btn-li mx-1">
+    <a href="https://wa.me/923340289059/?text=HI!%20Reached%20You%20Through%20Technofy" class="btn-floating btn-li mx-1">
       <i class="fab fa-whatsapp"> </i>
     </a>
   </li>
