@@ -65,7 +65,7 @@ function get_categories(){
     confirm($query);
     while($row = mysqli_fetch_array($query)){
         $categoryLinks = <<< DELIMETER
-    <li class="dropdown-link"><a href="./public/category.php?id={$row['cat_id']}">$row[cat_title]</a></li>
+    <li class="dropdown-link"><a href="http://technofy.digital/public/category.php?id={$row['cat_id']}">$row[cat_title]</a></li>
 DELIMETER;
 echo $categoryLinks;
     }
