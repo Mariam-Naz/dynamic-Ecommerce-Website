@@ -45,9 +45,9 @@ while($row = mysqli_fetch_array($query)){
     <div class="col-sm-12 col-lg-4 col-md-4">
     <div class="card-deck">
     <div class='card card-product'>
-    <a href='item.php?id={$row['product_id']}'><img  class="card-img-top" style="width: 100%; height: 170px;"  src=./resources/uploads/$row[product_image] alt="$row[product_title]"></a>
+    <a href='./public/item.php?id={$row['product_id']}'><img  class="card-img-top" style="width: 100%; height: 170px;"  src=./resources/uploads/$row[product_image] alt="$row[product_title]"></a>
     <div class="card-body">
-    <h4 class='card-title'><a href="item.php?id={$row['product_id']}">$row[product_title]</a></h4>
+    <h4 class='card-title'><a href="./public/item.php?id={$row['product_id']}">$row[product_title]</a></h4>
     <h4  class="card-text"><small class="text-muted">Rs. $row[product_price]</small></h4>
     <a class="btn btn-primary" target="_blank" href="./resources/cart.php?add={$row['product_id']}">ADD TO CART</a>
     </div>
