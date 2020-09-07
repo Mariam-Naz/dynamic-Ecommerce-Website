@@ -14,7 +14,7 @@ if(!isset($_SESSION['username'])){
                
                 <!-- /.row -->
                 <?php 
-                    if($_SERVER['REQUEST_URI'] == "/ecommerce/public/admin/"|| $_SERVER['REQUEST_URI']=="/ecommerce/public/admin/index.php"){
+                    if(!isset($_GET['orders']) && !isset($_GET['categories']) && !isset($_GET['products']) && !isset($_GET['add_product']) && !isset($_GET['edit_product']) && !isset($_GET['slider']) && !isset($_GET['users'])){
                         include(TEMPLATE_BACK . "/admin_content.php");
                     }           
                     if(isset($_GET['orders'])){
