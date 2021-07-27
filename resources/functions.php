@@ -27,7 +27,7 @@ function query($sql){
 function confirm($result){
     global $connection;
     if(!$result){
-        die("Query Failed!!!" + mysqli_error($connection));
+        die("Query Failed!!!" . mysqli_error($connection));
     }
 }
 
@@ -36,7 +36,7 @@ function escape($string)
     global $connection;
     return mysqli_real_escape_string($connection,$string);
 }
-// ********************************** FRONT END *****************************************************************************
+// ********************************** FRONT END **************************************************
 function get_products(){
 $query = query('SELECT * FROM products');
 confirm($query);
@@ -65,9 +65,9 @@ function get_categories(){
     confirm($query);
     while($row = mysqli_fetch_array($query)){
         $categoryLinks = <<< DELIMETER
-    <li class="dropdown-link"><a href="http://technofy.digital/public/category.php?id={$row['cat_id']}">$row[cat_title]</a></li>
-DELIMETER;
-echo $categoryLinks;
+    <li class="dropdown-link"><a href="./public/category.php?id={$row['cat_id']}">$row[cat_title]</a></li>
+    DELIMETER;
+    echo $categoryLinks;
     }
 }
 
@@ -121,7 +121,7 @@ function login_user(){
         }
     }
 }
-//*******************************************for registered clients*****************************************
+//*******************************************for registered clients*********************************
 function reg_login(){
     if(isset($_POST['login'])){
         $username = $_POST['reg_login_username'];
@@ -163,7 +163,7 @@ function reg_register(){
             confirm($query3);
             $_SESSION['reg_user'] = $username;
             set_message("Registered Successfully!!");
-            redirect('index.php');
+            redirect('./index.php');
         }
     }
 }
@@ -219,7 +219,7 @@ function showSliderInFront(){
 }
 
 
-// ********************************** BACK END *****************************************************************************
+// ********************************** BACK END *********************************************
 
 function displayOrders(){
     $query = query("SELECT * FROM orders");
@@ -284,56 +284,58 @@ function displayProducts(){
 }
 
 function addProducts(){
-$target_dir = "../../resources/uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// Check if image file is a actual image or fake image
-if(isset($_POST["publish"])) {
-    $product_title = escape($_POST['product_title']);
-    $product_introduction = escape($_POST['product_introduction']);
-    $product_description = escape($_POST['product_description']);
-    $product_price = escape($_POST['product_price']);
-    $product_category_id= escape($_POST['product_category']);
-    $product_quantity = escape($_POST['product_quantity']);
-  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-  if($check !== false) {
-    echo "File is an image - " . $check["mime"] . ".";
-    $uploadOk = 1;
-  } else {
-    echo "File is not an image.";
+    
+    // Check if image file is a actual image or fake image
+    if(isset($_POST["publish"])) {
+        $target_dir = "../../resources/uploads/";
+        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        $product_title = escape($_POST['product_title']);
+        $product_introduction = escape($_POST['product_introduction']);
+        $product_description = escape($_POST['product_description']);
+        $product_price = escape($_POST['product_price']);
+        $product_category_id= escape($_POST['product_category']);
+        $product_quantity = escape($_POST['product_quantity']);
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
+    }
+    
+
+    // Check if file already exists
+    if (file_exists($target_file)) {
+    echo "Sorry, file already exists.";
     $uploadOk = 0;
-  }
-}
+    }
 
-// Check if file already exists
-if (file_exists($target_file)) {
-  echo "Sorry, file already exists.";
-  $uploadOk = 0;
-}
+    // Allow certain file formats
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+    && $imageFileType != "gif" && $imageFileType != "webp" ) {
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $uploadOk = 0;
+    }
 
-// Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-  $uploadOk = 0;
-}
-
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-  echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else {
-  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-    $imgname = $_FILES["fileToUpload"]["name"];
-    $query = query("INSERT INTO products(product_title, product_category_id, product_price, product_quantity, product_long_description, product_description, product_image) VALUES('{$product_title}' , '{$product_category_id}' , '.{$product_price}.' , '{$product_quantity}' , '{$product_description}' , '{$product_introduction}' , '{$imgname}')");
-    confirm($query);
-    header("Location: ./");
-  } else {
-    echo "Sorry, there was an error uploading your file.";
-  }
-}
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk == 0) {
+    echo "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
+    } else {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        $imgname = $_FILES["fileToUpload"]["name"];
+        $query = query("INSERT INTO products(product_title, product_category_id, product_price, product_quantity, product_long_description, product_description, product_image) VALUES('{$product_title}' , '{$product_category_id}' , '{$product_price}' , '{$product_quantity}' , '{$product_description}' , '{$product_introduction}' , '{$imgname}')");
+        confirm($query);
+        header("Location: ./");
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+    }
+ }
 }
 
 
