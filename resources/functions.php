@@ -31,6 +31,10 @@ function confirm($result){
     }
 }
 
+function mysqlInsertId(){
+    global $connection;
+    mysqli_insert_id($connection);
+}
 function escape($string)
 {
     global $connection;

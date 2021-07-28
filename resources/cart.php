@@ -72,6 +72,8 @@ function cart(){
 
         DELIMETER;
         $_SESSION['individual_quant'] = $value;
+        $_SESSION['product_name'] = $row['product_title'];
+        $_SESSION['unit_amounts'] = $row['product_price'];
         echo $product;
 
         $item_name++;
@@ -91,7 +93,7 @@ function cart(){
 function showBuyButton(){
     if(isset($_SESSION['item_quantity'])){
     $buy_button = <<<DELIMETER
-    <button type='submit' name='submit' class="btn-buy"><span>BUY NOW!</span></button>
+        <button type='submit' name='submit' class="btn-buy"><span>BUY NOW!</span></button>
     DELIMETER;
     return $buy_button;
     }
